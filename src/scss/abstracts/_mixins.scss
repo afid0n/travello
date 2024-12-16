@@ -1,0 +1,5 @@
+@mixin icon($theme:$accent-color){
+    fill: $theme;
+    width: 1rem;
+    height: 1rem;
+}
