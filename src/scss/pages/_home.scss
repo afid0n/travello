@@ -1,4 +1,78 @@
-h1{
-    font-family: 'Rubik';
-    color: blue;
+.hero {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  background-image: url(/src/images/banner3.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &::before {
+    position: absolute;
+    content: " ";
+    background-color: #040E27;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: .1;
+  }
+
+  .hero__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 3rem;
+    line-height: 1;
+    gap: 5px;
+    z-index: 3;
+      color: white;
+      h3 {
+        font-weight: 400;
+      }
+
+      p {
+        padding-bottom: 2rem;
+      }
+  }
+
+  .chevron-left {
+    position: absolute;
+    top: 60%;
+    left: 0;
+    transform: translate(0, -70%);
+    background-color: rgba(178, 178, 178, 0.236);
+    color: #fff;
+    padding: 3rem 1rem;
+    cursor: pointer;
+    z-index: 999;
+    transition: 0.2s ease-in;
+    &:hover {
+      background: #fff;
+      color: black;
+      transition: .6s;
+    }
+  }
+
+  .chevron--right {
+    position: absolute;
+    top: 60%;
+    right: 0;
+    transform: translate(0, -70%);
+    background-color: rgba(178, 178, 178, 0.236);
+    color: #fff;
+    padding: 3rem 1rem;
+    z-index: 999;
+    transition: 0.2s ease-in;
+  cursor: pointer;
+    &:hover {
+      background-color: #fff;
+      color: #000;
+    }
+
+  }
 }
