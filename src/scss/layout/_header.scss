@@ -5,13 +5,16 @@ header{
     position: fixed;
     z-index: 999;
     width: 100%;
+    height: auto;
     background-color: #fff;
-}
+ }
 nav{
 display: flex;
 align-items: center;
 justify-content: center;
 gap: 3rem;
+}
+.logo{ padding-left: 2rem;
 }
 .nav__bar{
     display: flex;
@@ -20,18 +23,45 @@ gap: 3rem;
    margin: 0 4rem;
      a{
     color: black;
+    transition: 0.2s;
+   
+    &:hover{
+        color: $color-secondary;
+    }
    }
 }
 .dropdown{
     display: flex;
     align-items: center;
-    gap: 3px;
+    gap: 10px;
+    position: relative;
+    transition: 0.6 ease-in-out;
     &__icon{
        width: 10px;
        height: 10px;
        fill: black;    
     }
 }
+.dropdown__content{
+    position: absolute;
+    display: none;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    background-color: white;
+    width: 12rem;
+    line-height: 2rem;
+  
+    a{
+       padding-left: 10px;
+        text-align: left;
+    }
+}
+.dropdown:hover .dropdown__content{
+    display: block;
+    }
 
 .interact{
     display: flex;
@@ -45,7 +75,11 @@ gap: 3rem;
     &__icon{
        width: 14px;
        height: 14px;
-       fill: $color-primary; 
+       fill: $color-primary;
+       transition: 0.6s; 
+       &:hover{
+        fill: $accent-color;
+       }
     } 
     span{
         font-size: 14px;
@@ -60,19 +94,40 @@ gap: 3rem;
   gap: 15px;
    &__icon{
    fill: $accent-color;
-  
+   transition: 0.6s;
+  &:hover{
+    fill: $color-primary;
+  }
    }
    
   
 }
 .search{
     background-color: $color-primary;
-    padding: 45px 32;
+    padding: 50px 35px;
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
     i{
         color: #fff;
     }
 }
+}
+.bars{
+    display: none;
+}
+@media (max-width:768px){
+    .nav__bar{
+        display: none;
+    }
+    .interact :not(.search){
+        display: none;
+    }
+
+    .bars{
+        display: block;
+       right: 0;
+        color: $color-primary;
+    }
 }
