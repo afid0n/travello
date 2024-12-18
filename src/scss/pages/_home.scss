@@ -1,19 +1,20 @@
+// hero section
 .hero {
   height: 100vh;
   width: 100%;
   position: relative;
   z-index: 2;
-  background-image: url(/src/images/banner3.png);
-  background-position: bottom;
+  background-image: url(/src/images/Switzerland.png);
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
   &::before {
     position: absolute;
     content: " ";
-    background-color: #040E27;
+    background-color: $color-background;
     height: 100%;
     width: 100%;
     top: 0;
@@ -75,4 +76,16 @@
     }
 
   }
+}
+// travel query section
+.travel-query{
+ color: #fff;
+ gap: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+  background-color: $color-background;
+  width: 100%;
+
 }

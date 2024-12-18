@@ -158,10 +158,10 @@
   width: 100%;
   position: relative;
   z-index: 2;
-  background-image: url(/src/images/banner3.png);
-  background-position: bottom;
+  background-image: url(/src/images/Switzerland.png);
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -225,6 +225,17 @@
 .hero .chevron--right:hover {
   background-color: #fff;
   color: #000;
+}
+
+.travel-query {
+  color: #fff;
+  gap: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+  background-color: #040E27;
+  width: 100%;
 }
 
 header {
@@ -350,17 +361,32 @@ nav {
   display: none;
 }
 
-@media (max-width: 768px) {
-  .nav__bar {
-    display: none;
-  }
-  .interact :not(.search) {
-    display: none;
-  }
-  .bars {
+@media (max-width: 991px) {
+  header .bars {
     display: block;
-    right: 0;
+    padding-left: 1.2rem;
+  }
+  header .bars i {
     color: #FF4A52;
+    font-size: 2rem;
+  }
+  header nav .logo {
+    padding-left: 0;
+  }
+  header nav .nav__bar {
+    display: none;
+  }
+  header .interact {
+    justify-content: space-between;
+  }
+  header .interact .phone {
+    display: none;
+  }
+  header .interact .social {
+    display: none;
+  }
+  header .interact .search {
+    padding: 27px;
   }
 }
 .btn {
