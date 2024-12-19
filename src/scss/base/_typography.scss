@@ -38,3 +38,20 @@
             font-size: 16px;
     }
 }
+.popular-destination{
+    &__title{
+        h3{
+            font-size: 38px;
+            font-weight: 400;
+        }
+    }
+    &__card{
+        p{
+            font-size: 22px;
+            color: white;
+            a{
+                font-size: 12px;
+            }
+        }
+    }
+}

@@ -9,10 +9,12 @@
 
 *::-moz-selection {
   background: rgb(51, 51, 51);
+  color: white;
 }
 
 *::selection {
   background: rgb(51, 51, 51);
+  color: white;
 }
 
 @font-face {
@@ -175,6 +177,18 @@
   font-size: 16px;
 }
 
+.popular-destination__title h3 {
+  font-size: 38px;
+  font-weight: 400;
+}
+.popular-destination__card p {
+  font-size: 22px;
+  color: white;
+}
+.popular-destination__card p a {
+  font-size: 12px;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -262,7 +276,7 @@ nav {
   transition: 0.6s;
 }
 .interact .phone__icon:hover {
-  fill: #AAB1B7;
+  fill: #9ca1a5;
 }
 .interact .phone span {
   font-size: 14px;
@@ -276,7 +290,7 @@ nav {
   gap: 15px;
 }
 .interact .social__icon {
-  fill: #AAB1B7;
+  fill: #9ca1a5;
   transition: 0.6s;
 }
 .interact .social__icon:hover {
@@ -346,6 +360,18 @@ nav {
 }
 .btn--search:hover {
   background-color: #20C6B6;
+}
+
+.btn--small {
+  background-color: #20C6B6;
+  color: white;
+  transition: 0.4s ease-in-out;
+  border-radius: 5px;
+  padding: 0.3rem 0.7rem;
+  border-radius: 60px;
+}
+.btn--small:hover {
+  background-color: #FF4A52;
 }
 
 .hero {
@@ -422,7 +448,7 @@ nav {
 
 @media (max-width: 599px) {
   .hero {
-    height: 50vh;
+    height: 45vh;
   }
   .hero__title h3 {
     padding: 1rem;
@@ -459,23 +485,142 @@ nav {
   height: 15vh;
   background-color: #040E27;
   width: 100%;
-  padding: 5%;
+  padding: 1rem;
 }
 .travel-query input {
   background-color: #040E27;
-  color: #AAB1B7;
-  border: 0.5px #AAB1B7 solid;
+  color: #9ca1a5;
+  border: 0.5px #9ca1a5 solid;
   border-radius: 5px;
   padding: 1rem 3rem 1rem 0.6rem;
 }
 .travel-query select {
   background-color: #040E27;
-  color: #AAB1B7;
-  border: 0.5px #AAB1B7 solid;
+  color: #9ca1a5;
+  border: 0.5px #9ca1a5 solid;
   border-radius: 5px;
   padding: 0.8rem 5rem 0.8rem 0.4rem;
 }
 .travel-query select option {
   background-color: white;
   color: black;
+}
+
+@media (max-width: 599px) {
+  .travel-query {
+    height: 45vh;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .travel-query h3 {
+    padding: 0;
+    padding-top: 2rem;
+  }
+  .travel-query input {
+    padding: 1rem 50% 1rem 0.6rem;
+  }
+  .travel-query select {
+    padding: 0.8rem 59% 0.8rem 0.4rem;
+  }
+}
+@media (min-width: 600px) {
+  .travel-query {
+    height: 20vh;
+    gap: 5px;
+  }
+  h3 {
+    text-align: start;
+  }
+  input {
+    padding: 1rem;
+  }
+}
+.popular-destination {
+  padding: 5rem 12%;
+}
+.popular-destination__title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 30px;
+  padding: 4rem 25%;
+}
+.popular-destination__title p {
+  color: #9ca1a5;
+}
+.popular-destination__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  -moz-column-gap: 4rem;
+       column-gap: 4rem;
+  row-gap: 2rem;
+}
+
+.popular-destination__card {
+  position: relative;
+  padding: 40% 55%;
+  border: 1px solid rgba(0, 0, 0, 0.401);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 0.4s ease;
+}
+.popular-destination__card::before {
+  position: absolute;
+  content: " ";
+  background: -webkit-linear-gradient(top, rgba(4, 14, 39, 0) 0%, #040E27 100%);
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.6;
+}
+.popular-destination__card p {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 2rem;
+  transition: 0.4s linear;
+}
+.popular-destination__card:hover {
+  transform: translateY(-15px);
+}
+.popular-destination__card:hover .btn--small {
+  background-color: #FF4A52;
+}
+.popular-destination__card:hover p {
+  color: #FF4A52;
+}
+
+#France {
+  background-image: url(/src/images/France.png);
+}
+
+#Brazil {
+  background-image: url(/src/images/Brazil.png);
+}
+
+#America {
+  background-image: url(/src/images/America.png);
+}
+
+#Nepal {
+  background-image: url(/src/images/Nepal.png);
+}
+
+#Maldives {
+  background-image: url(/src/images/Maldives.png);
+}
+
+#Indonesia {
+  background-image: url(/src/images/Indonesia.png);
 }/*# sourceMappingURL=main.css.map */
