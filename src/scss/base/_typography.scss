@@ -17,4 +17,23 @@
 }
 .btn{
     font-weight: 500;
+    &--search{
+        font-weight: 500;
+    }
+}
+.travel-query{
+    h3{
+        padding: 2rem;
+        font-size: 24px;
+        font-weight: 400;
+    }
+    input{
+        &::placeholder{
+            font-size: 16px;
+            color: #AAB1B7;
+        }
+    }
+    select{
+            font-size: 16px;
+    }
 }

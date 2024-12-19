@@ -1,6 +1,6 @@
 // hero section
 .hero {
-  height: 100vh;
+  height: 85vh;
   width: 100%;
   position: relative;
   z-index: 2;
@@ -80,12 +80,30 @@
 // travel query section
 .travel-query{
  color: #fff;
- gap: 20px;
+ gap: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 20vh;
+  height: 15vh;
   background-color: $color-background;
   width: 100%;
-
+ padding: 5%;
+input{
+  background-color: $color-background;
+  color: $accent-color;
+  border: 0.5px $accent-color solid;
+  border-radius: 5px;
+  padding: 1rem 3rem 1rem 0.6rem;
+}
+select{
+  background-color: $color-background;
+  color: $accent-color;
+  border: 0.5px $accent-color solid;
+  border-radius: 5px;
+  padding: 0.8rem 5rem 0.8rem 0.4rem;
+  option{
+    background-color: white;
+    color: black;
+  }
+}
 }
