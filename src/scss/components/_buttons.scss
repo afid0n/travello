@@ -12,3 +12,8 @@
     @include button-style($color-primary , $color-secondary);
     padding: 1rem 2.5rem;
 }
+.btn--small{
+    @include button-style($color-secondary, $color-primary);
+    padding:0.3rem 0.7rem;
+    border-radius: 60px;
+}

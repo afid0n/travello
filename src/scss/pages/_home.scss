@@ -78,7 +78,7 @@
 }
 @include for-phone-only {
   .hero {
-    height: 50vh;
+    height: 45vh;
     &__title {
       h3 {
         padding: 1rem;
@@ -125,7 +125,9 @@
   height: 15vh;
   background-color: $color-background;
   width: 100%;
- padding: 5%;
+  padding: 1rem;
+  
+
 input{
   background-color: $color-background;
   color: $accent-color;
@@ -144,4 +146,116 @@ select{
     color: black;
   }
 }
+}
+@include for-phone-only{
+  .travel-query{
+    height: 45vh;
+    justify-content: flex-start;
+    align-items: flex-start;
+  flex-direction: column;
+  
+h3{
+  padding: 0;
+  padding-top: 2rem;
+}
+input{
+ padding: 1rem 50% 1rem 0.6rem;
+}
+select{
+  padding: 0.8rem 59% 0.8rem 0.4rem;
+}
+  }
+}
+@include for-tablet-portrait-up {
+.travel-query{
+  height: 20vh;
+  gap: 5px;
+}
+h3{
+ text-align: start;
+}
+input{
+  padding: 1rem;
+}
+}
+// Popular destination
+.popular-destination{
+  padding: 5rem 12%;
+ &__title{
+  display: flex;
+ flex-direction: column;
+  align-items: center;
+ justify-content: center;
+ text-align: center;
+ gap: 30px;
+ padding: 4rem 25%;
+ p{
+  color: $accent-color;
+ }
+ }
+ &__container{
+
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  column-gap: 4rem;
+  row-gap: 2rem;
+ }
+}
+.popular-destination__card{
+  position: relative;
+  padding: 40% 55%;
+  border: 1px solid rgba(0, 0, 0, 0.401);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+ background-size: cover;
+  &::before {
+    position: absolute;
+    content: " ";
+    background: -webkit-linear-gradient(top, rgba(4, 14, 39, 0) 0%, $color-background 100%);    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: .6;
+  }
+  p{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 2rem;
+    transition: 0.4s linear;
+  }
+  transition: 0.4s ease;
+  &:hover{
+   transform: translateY(-15px);
+   .btn--small{
+    background-color: $color-primary;
+   }
+   p{
+    color: $color-primary;
+   }
+   }
+}
+#France{
+ background-image: url(/src/images/France.png) 
+}
+#Brazil{
+  background-image: url(/src/images/Brazil.png);
+}
+#America{
+  background-image: url(/src/images/America.png);
+}
+#Nepal{
+  background-image: url(/src/images/Nepal.png);
+}
+#Maldives{
+  background-image: url(/src/images/Maldives.png);
+}
+#Indonesia{
+  background-image: url(/src/images/Indonesia.png);
 }
