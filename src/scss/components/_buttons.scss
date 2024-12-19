@@ -8,3 +8,7 @@
     background-color: $color-primary;
    }
 }
+.btn--search{
+    @include button-style($color-primary , $color-secondary);
+    padding: 1rem 2.5rem;
+}
