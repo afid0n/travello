@@ -188,7 +188,7 @@
 
 // Popular destination
 .popular-destination {
-
+padding-bottom: 7%;
   &__title {
     display: flex;
     flex-direction: column;
@@ -197,6 +197,7 @@
     text-align: center;
     gap: 30px;
     padding-top: 10%;
+    padding-bottom: 2rem;
 
     p {
       width: 40%;
@@ -300,7 +301,7 @@
   background-repeat: no-repeat;
   padding: 4rem 15%;
   z-index: 1;
-  
+
   &::before {
     position: absolute;
     content: " ";
@@ -309,16 +310,18 @@
     width: 100%;
     top: 0;
     left: 0;
-    opacity: 0.6;
+    opacity: 0.7;
     z-index: -1;
   }
-   &__form{
+
+  &__form {
     display: flex;
     justify-content: end;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
     width: 60%;
-   }
+  }
+
   &__container {
     display: flex;
     justify-content: space-between;
@@ -332,12 +335,14 @@
       padding: 1rem;
       width: 80%;
 
-     
+
     }
   }
 
   &__title {
+    display: flex;
     flex-direction: column;
+    gap: 0.5rem;
     width: 30%;
 
     h4 {
@@ -349,3 +354,92 @@
     }
   }
 }
+
+// popular places
+.popular-places {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  background-color: #F7FAFD;
+  padding-bottom: 10%;
+  &__title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10%;
+    padding-bottom: 2rem;
+    text-align: center;
+    gap: 20px;
+  p{
+    width: 55%;
+    color: $accent-color;
+  }
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding-bottom: 3rem;
+    .popular-places__card {
+      overflow: hidden;
+      border: 1px solid rgba(0, 0, 0, 0.072);
+      border-radius: 10px;
+      background-color: white;
+      position: relative;
+      transition: 0.4s ease;
+      &:hover{
+        color: $color-primary;
+        .btn--small{
+          background-color: $color-primary;
+        }
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;       }
+      .btn--small{
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        padding: 8px 16px;
+      }
+      &--info{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 10px;
+        padding: 2rem 1rem;
+        p{
+          color: $accent-color;
+        }
+      }
+    }
+  }
+  .info-review{
+    display: flex;
+    justify-content: space-between;
+    span{
+      align-items: flex-start;
+      font-size: 14px;
+    }
+    .fa-star{
+      font-size: 10px;
+      color: #FDAE5C;
+    }
+    a{
+      color: $accent-color;
+    }
+    .clock{ 
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+     .fa-clock{
+      color: rgb(94, 93, 93);
+     }
+    }
+  }
+  .btn--enter{
+    position: relative;
+  }
+}
+

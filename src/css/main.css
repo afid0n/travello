@@ -200,6 +200,18 @@
   font-size: 16px;
 }
 
+.popular-places__title h3 {
+  font-size: 38px;
+  font-weight: 400;
+}
+.popular-places__card--info h3 {
+  font-size: 22px;
+  font-weight: 400;
+}
+.popular-places__card--info p {
+  font-size: 14px;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -486,6 +498,9 @@ nav {
   color: black;
 }
 
+.popular-destination {
+  padding-bottom: 7%;
+}
 .popular-destination__title {
   display: flex;
   flex-direction: column;
@@ -494,6 +509,7 @@ nav {
   text-align: center;
   gap: 30px;
   padding-top: 10%;
+  padding-bottom: 2rem;
 }
 .popular-destination__title p {
   width: 40%;
@@ -561,14 +577,14 @@ nav {
   width: 100%;
   top: 0;
   left: 0;
-  opacity: 0.6;
+  opacity: 0.7;
   z-index: -1;
 }
 .subscribe__form {
   display: flex;
   justify-content: end;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
   width: 60%;
 }
 .subscribe__container {
@@ -585,7 +601,9 @@ nav {
   width: 80%;
 }
 .subscribe__title {
+  display: flex;
   flex-direction: column;
+  gap: 0.5rem;
   width: 30%;
 }
 .subscribe__title h4 {
@@ -593,4 +611,91 @@ nav {
 }
 .subscribe__title p {
   color: #9ca1a5;
+}
+
+.popular-places {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  background-color: #F7FAFD;
+  padding-bottom: 10%;
+}
+.popular-places__title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10%;
+  padding-bottom: 2rem;
+  text-align: center;
+  gap: 20px;
+}
+.popular-places__title p {
+  width: 55%;
+  color: #9ca1a5;
+}
+.popular-places__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding-bottom: 3rem;
+}
+.popular-places__container .popular-places__card {
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.072);
+  border-radius: 10px;
+  background-color: white;
+  position: relative;
+  transition: 0.4s ease;
+}
+.popular-places__container .popular-places__card:hover {
+  color: #FF4A52;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+}
+.popular-places__container .popular-places__card:hover .btn--small {
+  background-color: #FF4A52;
+}
+.popular-places__container .popular-places__card .btn--small {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 8px 16px;
+}
+.popular-places__container .popular-places__card--info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 2rem 1rem;
+}
+.popular-places__container .popular-places__card--info p {
+  color: #9ca1a5;
+}
+.popular-places .info-review {
+  display: flex;
+  justify-content: space-between;
+}
+.popular-places .info-review span {
+  align-items: flex-start;
+  font-size: 14px;
+}
+.popular-places .info-review .fa-star {
+  font-size: 10px;
+  color: #FDAE5C;
+}
+.popular-places .info-review a {
+  color: #9ca1a5;
+}
+.popular-places .info-review .clock {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+.popular-places .info-review .clock .fa-clock {
+  color: rgb(94, 93, 93);
+}
+.popular-places .btn--enter {
+  position: relative;
 }/*# sourceMappingURL=main.css.map */
