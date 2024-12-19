@@ -76,38 +76,41 @@
 
   }
 }
-@include for-phone-only{
-  @media (max-width:599px){
-     .hero{
-      height: 45vh;
-      &__title{
-      
-        h3{
-          padding: 1rem;
-          font-size: 50px;
-        }
-        p{
-         text-align: center;
-        }
+@include for-phone-only {
+  .hero {
+    height: 50vh;
+    &__title {
+      h3 {
+        padding: 1rem;
+        font-size: 50px;
+      }
+      p {
+        text-align: center;
       }
     }
   }
 }
-@include for-tablet-portrait-up{
-  @media (max-width: 768px) {
-    .hero{
-      height: 70vh;
-      &__title{
-        h3{
-          font-size: 70px;
-          padding: 1rem;
-        }
-      p{
-        text-align: center;
-         margin-bottom: 5%;
+
+@include for-tablet-portrait-up {
+  .hero {
+    height: 70vh;
+    &__title {
+      h3 {
+        font-size: 70px;
+        padding: 1rem;
       }
+      p {
+        text-align: center;
+        margin-bottom: 5%;
       }
     }
+  }
+}
+
+
+@include for-big-desktop-up {
+  .hero {
+    height: 85vh; 
   }
 }
 
