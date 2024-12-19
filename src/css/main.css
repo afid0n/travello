@@ -145,6 +145,7 @@
 .hero__title h3 {
   font-family: "Nothing You Could Do";
   font-size: 120px;
+  font-weight: 400;
 }
 .hero__title p {
   font-size: 20px;
@@ -381,10 +382,8 @@ nav {
   z-index: 3;
   color: white;
 }
-.hero .hero__title h3 {
-  font-weight: 400;
-}
 .hero .hero__title p {
+  text-align: center;
   padding-bottom: 2rem;
 }
 .hero .chevron-left {
@@ -421,6 +420,31 @@ nav {
   color: #000;
 }
 
+@media (max-width: 599px) and (max-width: 599px) {
+  .hero {
+    height: 45vh;
+  }
+  .hero__title h3 {
+    padding: 1rem;
+    font-size: 50px;
+  }
+  .hero__title p {
+    text-align: center;
+  }
+}
+@media (max-width: 768px) and (max-width: 768px) {
+  .hero {
+    height: 70vh;
+  }
+  .hero__title h3 {
+    font-size: 70px;
+    padding: 1rem;
+  }
+  .hero__title p {
+    text-align: center;
+    margin-bottom: 5%;
+  }
+}
 .travel-query {
   color: #fff;
   gap: 10px;
