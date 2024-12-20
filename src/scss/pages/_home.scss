@@ -334,20 +334,21 @@
   align-items: center;
   gap: 2rem;
   background-color: #F7FAFD;
-  padding-bottom: 10%;
+  padding: 3.5rem 12%;
+
+  @include for-desktop-up {
+    padding: 3rem 4%;
+  }
 
   &__title {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 10%;
-    padding-bottom: 2rem;
     text-align: center;
     gap: 20px;
 
     p {
-      width: 55%;
       color: $accent-color;
     }
   }
@@ -356,8 +357,14 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    padding-bottom: 2rem;
-    width: 80%;
+
+    @include for-tablet-landscape-up {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include for-phone-only {
+      grid-template-columns: repeat(1, 1fr);
+    }
 
     .popular-places__card {
       overflow: hidden;
@@ -453,6 +460,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 100%;
 
     h3 {
       color: white;
@@ -510,10 +518,21 @@
 
 // advantages
 .advantages {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 5%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 3.5rem 12%;
+
+  @include for-desktop-up {
+    padding: 3rem 4%;
+  }
+
+  @include for-tablet-landscape-up {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include for-phone-only {
+    grid-template-columns: repeat(1, 1fr);
+  }
 
   &__card {
     display: flex;
@@ -529,7 +548,6 @@
 
       p {
         color: $accent-color;
-
       }
     }
   }
@@ -542,16 +560,24 @@
   align-items: center;
   flex-direction: column;
   background-color: #F7FAFD;
-  padding: 2rem;
+  padding: 3.5rem 12%;
+
+  @include for-desktop-up {
+    padding: 3rem 4%;
+  }
 
   &__card {
-    padding: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
     gap: 2rem;
+    width: 60%;
+    margin: 0 auto;
+
+    @include for-desktop-up {
+      width: 100%;
+    }
 
     &--image {
       position: relative;
@@ -579,10 +605,7 @@
         color: $accent-color;
       }
 
-      p {
 
-        width: 70%;
-      }
     }
 
     &--dots {

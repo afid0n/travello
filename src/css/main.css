@@ -233,6 +233,13 @@
   font-family: "Nothing You Could Do";
   font-size: 80px;
 }
+@media (max-width: 768px) {
+  .video__title h3 {
+    font-size: 45px;
+    text-align: center;
+    width: 100%;
+  }
+}
 
 .advantages__card--title h3 {
   font-size: 22px;
@@ -240,6 +247,7 @@
 
 .quotes__card--title p {
   font-size: 18px;
+  text-align: center;
 }
 
 header {
@@ -731,28 +739,38 @@ nav {
   align-items: center;
   gap: 2rem;
   background-color: #F7FAFD;
-  padding-bottom: 10%;
+  padding: 3.5rem 12%;
+}
+@media (max-width: 992px) {
+  .popular-places {
+    padding: 3rem 4%;
+  }
 }
 .popular-places__title {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 10%;
-  padding-bottom: 2rem;
   text-align: center;
   gap: 20px;
 }
 .popular-places__title p {
-  width: 55%;
   color: #9ca1a5;
 }
 .popular-places__container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-  padding-bottom: 2rem;
-  width: 80%;
+}
+@media (max-width: 768px) {
+  .popular-places__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 576px) {
+  .popular-places__container {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 .popular-places__container .popular-places__card {
   overflow: hidden;
@@ -831,6 +849,7 @@ nav {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 100%;
 }
 .video__title h3 {
   color: white;
@@ -878,10 +897,24 @@ nav {
 }
 
 .advantages {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 5%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 3.5rem 12%;
+}
+@media (max-width: 992px) {
+  .advantages {
+    padding: 3rem 4%;
+  }
+}
+@media (max-width: 768px) {
+  .advantages {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 576px) {
+  .advantages {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 .advantages__card {
   display: flex;
@@ -905,16 +938,26 @@ nav {
   align-items: center;
   flex-direction: column;
   background-color: #F7FAFD;
-  padding: 2rem;
+  padding: 3.5rem 12%;
+}
+@media (max-width: 992px) {
+  .quotes {
+    padding: 3rem 4%;
+  }
 }
 .quotes__card {
-  padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
   gap: 2rem;
+  width: 60%;
+  margin: 0 auto;
+}
+@media (max-width: 992px) {
+  .quotes__card {
+    width: 100%;
+  }
 }
 .quotes__card--image {
   position: relative;
@@ -938,9 +981,6 @@ nav {
 }
 .quotes__card--title h4 {
   color: #9ca1a5;
-}
-.quotes__card--title p {
-  width: 70%;
 }
 .quotes__card--dots {
   display: flex;
