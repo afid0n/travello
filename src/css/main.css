@@ -250,6 +250,16 @@
   text-align: center;
 }
 
+.trips__title h3 {
+  font-size: 38px;
+}
+.trips .trips__card--title h3 {
+  font-size: 22px;
+}
+.trips .trips__card--title span {
+  font-size: 14px;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -834,10 +844,15 @@ nav {
 .video {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 .video__container {
   position: relative;
-  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .video__title {
   display: flex;
@@ -991,4 +1006,56 @@ nav {
 }
 .quotes__card--dots .active {
   color: #FF4A52;
+}
+
+.trips {
+  padding: 3.5rem 12%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+@media (max-width: 992px) {
+  .trips {
+    padding: 3rem 4%;
+  }
+}
+.trips__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+@media (max-width: 992px) {
+  .trips__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 576px) {
+  .trips__container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.trips__card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.trips__card h3 {
+  text-align: center;
+  transition: 0.2s ease;
+}
+.trips__card:hover h3 {
+  color: #FF4A52;
+}
+.trips__card img {
+  border-radius: 5px;
+}
+.trips__card--title {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.trips__card--title span {
+  color: #9ca1a5;
 }/*# sourceMappingURL=main.css.map */
