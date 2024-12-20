@@ -21,6 +21,7 @@
 
     p {
         font-size: 20px;
+
         @include for-desktop-up {
             line-height: 1.6;
         }
@@ -56,8 +57,19 @@
 
 .popular-destination {
     &__title {
+        @include for-phone-only {
+            padding: 0 .7rem;
+
+        }
+
         h3 {
             font-size: 38px;
+            text-align: center;
+
+            @include for-phone-only {
+                font-size: 30px;
+
+            }
         }
     }
 

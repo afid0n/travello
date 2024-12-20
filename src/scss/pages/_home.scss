@@ -141,60 +141,51 @@
   }
 }
 
-// @include for-big-desktop-up {
-//   .travel-query {
-//     padding: 1.2rem 4%;
-//     flex-direction: column;
-//     align-items: start;
-
-//     h3 {
-//       padding: .2rem;
-//       font-size: 20px;
-//       font-weight: 400;
-//     }
-
-//     input {
-//       width: 100%;
-//     }
-
-//     select {
-//       width: 100%;
-//     }
-//   }
-// }
-
-// @include for-phone-only {}
-
-
 // Popular destination
 .popular-destination {
-  padding-bottom: 7%;
+  padding: 3.5rem 12%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+
+  @include for-desktop-up {
+    padding: 3rem 4%;
+
+  }
 
   &__title {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    text-align: center;
     gap: 30px;
-    padding-top: 10%;
-    padding-bottom: 2rem;
+    width: 47%;
+
+    @include for-desktop-up {
+      width: 100%;
+    }
 
     p {
-      width: 40%;
       color: $accent-color;
+      text-align: center;
+      line-height: 1.6;
+      
     }
   }
 
   &__container {
-
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
-    width: 80%;
-    margin: 0 auto;
-    padding: 2rem;
 
+    @include for-desktop-up {
+      grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    @include for-phone-only {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
 

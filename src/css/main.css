@@ -187,8 +187,19 @@
   font-size: 16px;
 }
 
+@media (max-width: 576px) {
+  .popular-destination__title {
+    padding: 0 0.7rem;
+  }
+}
 .popular-destination__title h3 {
   font-size: 38px;
+  text-align: center;
+}
+@media (max-width: 576px) {
+  .popular-destination__title h3 {
+    font-size: 30px;
+  }
 }
 .popular-destination__card p {
   font-size: 22px;
@@ -551,29 +562,48 @@ nav {
 }
 
 .popular-destination {
-  padding-bottom: 7%;
+  padding: 3.5rem 12%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+@media (max-width: 992px) {
+  .popular-destination {
+    padding: 3rem 4%;
+  }
 }
 .popular-destination__title {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  text-align: center;
   gap: 30px;
-  padding-top: 10%;
-  padding-bottom: 2rem;
+  width: 47%;
+}
+@media (max-width: 992px) {
+  .popular-destination__title {
+    width: 100%;
+  }
 }
 .popular-destination__title p {
-  width: 40%;
   color: #9ca1a5;
+  text-align: center;
+  line-height: 1.6;
 }
 .popular-destination__container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
-  width: 80%;
-  margin: 0 auto;
-  padding: 2rem;
+}
+@media (max-width: 992px) {
+  .popular-destination__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 576px) {
+  .popular-destination__container {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 .popular-destination .popular-destination__card {
   overflow: hidden;
