@@ -138,6 +138,7 @@
 }
 * {
   font-family: "Rubik";
+  font-weight: 400;
 }
 
 .nav__bar a {
@@ -147,7 +148,6 @@
 .hero__title h3 {
   font-family: "Nothing You Could Do";
   font-size: 120px;
-  font-weight: 400;
 }
 .hero__title p {
   font-size: 20px;
@@ -179,7 +179,6 @@
 
 .popular-destination__title h3 {
   font-size: 38px;
-  font-weight: 400;
 }
 .popular-destination__card p {
   font-size: 22px;
@@ -190,7 +189,6 @@
 }
 
 .subscribe__title h4 {
-  font-weight: 400;
   font-size: 24px;
 }
 .subscribe__form input::-moz-placeholder {
@@ -202,11 +200,9 @@
 
 .popular-places__title h3 {
   font-size: 38px;
-  font-weight: 400;
 }
 .popular-places__card--info h3 {
   font-size: 22px;
-  font-weight: 400;
 }
 .popular-places__card--info p {
   font-size: 14px;
@@ -215,7 +211,10 @@
 .video__title h3 {
   font-family: "Nothing You Could Do";
   font-size: 80px;
-  font-weight: 400;
+}
+
+.advantages__card--title h3 {
+  font-size: 22px;
 }
 
 header {
@@ -775,4 +774,26 @@ nav {
     transform: scale(2);
     opacity: 0;
   }
+}
+
+.advantages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+}
+.advantages__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  gap: 2rem;
+}
+.advantages__card--title {
+  line-height: 2;
+}
+.advantages__card--title p {
+  color: #9ca1a5;
 }/*# sourceMappingURL=main.css.map */
