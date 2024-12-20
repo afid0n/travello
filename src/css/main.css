@@ -212,6 +212,12 @@
   font-size: 14px;
 }
 
+.video__title h3 {
+  font-family: "Nothing You Could Do";
+  font-size: 80px;
+  font-weight: 400;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -478,6 +484,7 @@ nav {
   background-color: #040E27;
   width: 100%;
   padding: 1.5rem 10%;
+  overflow: hidden;
 }
 .travel-query input {
   background-color: #040E27;
@@ -518,20 +525,20 @@ nav {
 .popular-destination__container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  padding: 2rem 12%;
+  gap: 1rem;
+  width: 80%;
+  margin: 0 auto;
+  padding: 2rem;
 }
-
-.popular-destination__card {
+.popular-destination .popular-destination__card {
+  overflow: hidden;
   position: relative;
   border: 1px solid rgba(0, 0, 0, 0.123);
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 5px;
-  background-repeat: no-repeat;
-  background-size: cover;
   transition: 0.4s ease;
 }
-.popular-destination__card::before {
+.popular-destination .popular-destination__card::before {
   position: absolute;
   content: " ";
   background: -webkit-linear-gradient(top, rgba(4, 14, 39, 0) 0%, #040E27 100%);
@@ -541,7 +548,7 @@ nav {
   left: 0;
   opacity: 0.6;
 }
-.popular-destination__card p {
+.popular-destination .popular-destination__card p {
   display: flex;
   gap: 10px;
   align-items: center;
@@ -551,22 +558,27 @@ nav {
   padding: 2rem;
   transition: 0.4s linear;
 }
-.popular-destination__card:hover {
+.popular-destination .popular-destination__card:hover {
   transform: translateY(-15px);
 }
-.popular-destination__card:hover .btn--small {
+.popular-destination .popular-destination__card:hover .btn--small {
   background-color: #FF4A52;
 }
-.popular-destination__card:hover p {
+.popular-destination .popular-destination__card:hover p {
   color: #FF4A52;
 }
 
 .subscribe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   background-image: url(/src/images/subscribe.png);
   background-position: center;
   background-repeat: no-repeat;
-  padding: 4rem 15%;
+  padding: 3rem;
+  background-size: cover;
+  width: 100%;
   z-index: 1;
 }
 .subscribe::before {
@@ -582,7 +594,7 @@ nav {
 }
 .subscribe__form {
   display: flex;
-  justify-content: end;
+  justify-content: center;
   align-items: center;
   gap: 20px;
   width: 60%;
@@ -591,7 +603,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
   padding: 1rem;
 }
 .subscribe__container input {
@@ -604,7 +616,7 @@ nav {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  width: 30%;
+  width: 40%;
 }
 .subscribe__title h4 {
   color: white;
@@ -639,7 +651,8 @@ nav {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-  padding-bottom: 3rem;
+  padding-bottom: 2rem;
+  width: 80%;
 }
 .popular-places__container .popular-places__card {
   overflow: hidden;
@@ -698,4 +711,68 @@ nav {
 }
 .popular-places .btn--enter {
   position: relative;
+}
+
+.video {
+  display: flex;
+  flex-direction: column;
+}
+.video__container {
+  position: relative;
+  overflow: hidden;
+}
+.video__title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.video__title h3 {
+  color: white;
+}
+.video__btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #20C6B6;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.video__btn i {
+  color: white;
+  z-index: 2;
+}
+.video__btn::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #20C6B6;
+  border-radius: 50%;
+  transform: scale(0.8);
+  opacity: 0.6;
+  z-index: -1;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
 }/*# sourceMappingURL=main.css.map */
