@@ -71,10 +71,11 @@
     }
 }
 .popular-places{
-    &__title
+    &__title{
     h3{
     font-size: 38px;
     font-weight: 400;
+    }
     }
     &__card--info{
         h3{
@@ -83,6 +84,15 @@
         }
         p{
             font-size: 14px;
+        }
+    }
+}
+.video{
+    &__title{
+        h3{
+            font-family: 'Nothing You Could Do';
+            font-size: 80px;
+            font-weight: 400;
         }
     }
 }
