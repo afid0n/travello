@@ -503,32 +503,49 @@ nav {
   color: #000;
 }
 
-.travel-query {
+.hero-query {
+  padding: 3.5rem 12%;
+  background-color: #040E27;
   color: #fff;
   gap: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #040E27;
-  width: 100%;
-  padding: 1.5rem 10%;
   overflow: hidden;
 }
-.travel-query input {
+@media (max-width: 992px) {
+  .hero-query {
+    flex-direction: column;
+    align-items: start;
+    gap: 15px;
+    padding: 3rem 4%;
+  }
+}
+.hero-query input {
   background-color: #040E27;
   color: #9ca1a5;
-  border: 0.5px #9ca1a5 solid;
+  border: 1px #9ca1a5 solid;
   border-radius: 5px;
   padding: 1rem 3rem 1rem 0.6rem;
 }
-.travel-query select {
+@media (max-width: 992px) {
+  .hero-query input {
+    width: 100%;
+  }
+}
+.hero-query select {
   background-color: #040E27;
   color: #9ca1a5;
-  border: 0.5px #9ca1a5 solid;
+  border: 1px #9ca1a5 solid;
   border-radius: 5px;
   padding: 0.8rem 5rem 0.8rem 0.4rem;
 }
-.travel-query select option {
+@media (max-width: 992px) {
+  .hero-query select {
+    width: 100%;
+  }
+}
+.hero-query select option {
   background-color: white;
   color: black;
 }
