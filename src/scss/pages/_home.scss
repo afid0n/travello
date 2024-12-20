@@ -12,6 +12,10 @@
   align-items: center;
   justify-content: center;
 
+  @include for-desktop-up {
+    height: 60vh;
+  }
+
   &::before {
     position: absolute;
     content: " ";
@@ -52,6 +56,10 @@
     z-index: 999;
     transition: 0.2s ease-in;
 
+    @include for-desktop-up {
+      display: none;
+    }
+
     &:hover {
       background: #fff;
       color: black;
@@ -71,6 +79,10 @@
     transition: 0.2s ease-in;
     cursor: pointer;
 
+    @include for-desktop-up {
+      display: none;
+    }
+
     &:hover {
       background-color: #fff;
       color: #000;
@@ -79,81 +91,48 @@
   }
 }
 
-// @include for-phone-only {
-//   .hero {
-//     height: 45vh;
-
-//     &__title {
-//       h3 {
-//         padding: 1rem;
-//         font-size: 50px;
-//       }
-
-//       p {
-//         text-align: center;
-//       }
-//     }
-//     .chevron-left{
-//       display: none;
-//     }
-//     .chevron--right{
-//       display: none;
-//     }
-//   }
-// }
-
-// @include for-tablet-portrait-up {
-//   .hero {
-//     height: 70vh;
-
-//     &__title {
-//       h3 {
-//         font-size: 70px;
-//         padding: 1rem;
-//       }
-
-//       p {
-//         text-align: center;
-//         margin-bottom: 5%;
-//       }
-//     }
-//   }
-// }
-
-
-// @include for-desktop-up {
-//   .hero {
-//     height: 85vh;
-//   }
-// }
-
 
 // travel query section
-.travel-query {
+.hero-query {
+  padding: 3.5rem 12%;
+  background-color: $color-background;
   color: #fff;
   gap: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: $color-background;
-  width: 100%;
-  padding: 1.5rem 10%;
   overflow: hidden;
+
+  @include for-desktop-up {
+    flex-direction: column;
+    align-items: start;
+    gap: 15px;
+    padding: 3rem 4%;
+  }
 
   input {
     background-color: $color-background;
     color: $accent-color;
-    border: 0.5px $accent-color solid;
+    border: 1px $accent-color solid;
     border-radius: 5px;
     padding: 1rem 3rem 1rem 0.6rem;
+
+    @include for-desktop-up {
+      width: 100%;
+    }
+
   }
 
   select {
     background-color: $color-background;
     color: $accent-color;
-    border: 0.5px $accent-color solid;
+    border: 1px $accent-color solid;
     border-radius: 5px;
     padding: 0.8rem 5rem 0.8rem 0.4rem;
+
+    @include for-desktop-up {
+      width: 100%;
+    }
 
     option {
       background-color: white;
@@ -162,154 +141,123 @@
   }
 }
 
-// @include for-big-desktop-up {
-//   .travel-query {
-//     padding: 1.2rem 4%;
-//     flex-direction: column;
-//     align-items: start;
-
-//     h3 {
-//       padding: .2rem;
-//       font-size: 20px;
-//       font-weight: 400;
-//     }
-
-//     input {
-//       width: 100%;
-//     }
-
-//     select {
-//       width: 100%;
-//     }
-//   }
-// }
-
-// @include for-phone-only {}
-
-
 // Popular destination
 .popular-destination {
-padding-bottom: 7%;
+  padding: 3.5rem 12%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+
+  @include for-desktop-up {
+    padding: 3rem 4%;
+
+  }
+
   &__title {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    text-align: center;
     gap: 30px;
-    padding-top: 10%;
-    padding-bottom: 2rem;
+    width: 47%;
+
+    @include for-desktop-up {
+      width: 100%;
+    }
 
     p {
-      width: 40%;
       color: $accent-color;
+      text-align: center;
+      line-height: 1.6;
+
     }
   }
 
   &__container {
-
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
-    width: 80%;
-    margin: 0 auto;
-    padding: 2rem;
-  
+
+    @include for-desktop-up {
+      grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    @include for-phone-only {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
 
-.popular-destination__card {
-  overflow: hidden;
-  position: relative;
-  border: 1px solid rgba(0, 0, 0, 0.123);
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  border-radius: 5px;
+  .popular-destination__card {
+    overflow: hidden;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.123);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 5px;
 
-  &::before {
-    position: absolute;
-    content: " ";
-    background: -webkit-linear-gradient(top, rgba(4, 14, 39, 0) 0%, $color-background 100%);
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    opacity: .6;
-  }
-
-  p {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    padding: 2rem;
-    transition: 0.4s linear;
-  }
-
-  transition: 0.4s ease;
-
-  &:hover {
-    transform: translateY(-15px);
-
-    .btn--small {
-      background-color: $color-primary;
+    &::before {
+      position: absolute;
+      content: " ";
+      background: -webkit-linear-gradient(top, rgba(4, 14, 39, 0) 0%, $color-background 100%);
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      opacity: .6;
     }
 
     p {
-      color: $color-primary;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: 2rem;
+      transition: 0.4s linear;
+    }
+
+    transition: 0.4s ease;
+
+    &:hover {
+      transform: translateY(-15px);
+
+      .btn--small {
+        background-color: $color-primary;
+      }
+
+      p {
+        color: $color-primary;
+      }
     }
   }
 }
-}
-
-// @include for-phone-only {
-//   .popular-destination__container {
-//     grid-template-columns: 1fr;
-//   }
-
-//   .popular-destination__title {
-//     h3 {
-//       font-size: 30px;
-//     }
-
-//     p {
-//       font-size: 16px;
-//     }
-//   }
-// }
-
-// @include for-tablet-portrait-up {
-//   .popular-destination__container {
-//     grid-template-columns: repeat(2, 1fr);
-//   }
-
-//   .popular-destination__title {
-//     h3 {
-//       font-size: 36px;
-//     }
-//   }
-// }
-
-// @include for-desktop-up {
-//   .popular-destination__container {
-//     grid-template-columns: repeat(3, 1fr);
-//   }
-// }
 
 // subscribe section
 .subscribe {
+  padding: 3.5rem 12%;
   display: flex;
   justify-content: center;
+  gap: 2rem;
   align-items: center;
   position: relative;
   background-image: url(/src/images/subscribe.png);
   background-position: center;
   background-repeat: no-repeat;
-  padding: 3rem;
   background-size: cover;
   width: 100%;
   z-index: 1;
+
+  @include for-desktop-up {
+    padding: 3rem 4%;
+
+  }
+
+  @include for-tablet-landscape-up {
+    flex-direction: column;
+    align-items: start;
+  }
 
   &::before {
     position: absolute;
@@ -323,36 +271,15 @@ padding-bottom: 7%;
     z-index: -1;
   }
 
-  &__form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    width: 60%;
-  }
-
-  &__container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    padding: 1rem;
-
-    input {
-      border: 1px rgba(0, 0, 0, 0.188) solid;
-      border-radius: 5px;
-      padding: 1rem;
-      width: 80%;
-
-
-    }
-  }
-
   &__title {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    width: 40%;
+    width: 35%;
+
+    @include for-tablet-landscape-up {
+      width: 100%;
+    }
 
     h4 {
       color: white;
@@ -362,7 +289,43 @@ padding-bottom: 7%;
       color: $accent-color;
     }
   }
+
+  &__form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 47%;
+
+    @include for-tablet-landscape-up {
+      width: 100%;
+      flex-direction: column;
+      align-items: start;
+    }
+
+    input {
+      border: 1px rgba(0, 0, 0, 0.188) solid;
+      border-radius: 5px;
+      padding: 1rem;
+      width: 100%;
+    }
+
+    .btn--enter {
+      @include for-tablet-landscape-up {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+
+
+
 }
+
+
 
 // popular places
 .popular-places {
@@ -372,6 +335,7 @@ padding-bottom: 7%;
   gap: 2rem;
   background-color: #F7FAFD;
   padding-bottom: 10%;
+
   &__title {
     display: flex;
     flex-direction: column;
@@ -381,10 +345,11 @@ padding-bottom: 7%;
     padding-bottom: 2rem;
     text-align: center;
     gap: 20px;
-  p{
-    width: 55%;
-    color: $accent-color;
-  }
+
+    p {
+      width: 55%;
+      color: $accent-color;
+    }
   }
 
   &__container {
@@ -393,6 +358,7 @@ padding-bottom: 7%;
     gap: 2rem;
     padding-bottom: 2rem;
     width: 80%;
+
     .popular-places__card {
       overflow: hidden;
       border: 1px solid rgba(0, 0, 0, 0.072);
@@ -400,156 +366,185 @@ padding-bottom: 7%;
       background-color: white;
       position: relative;
       transition: 0.4s ease;
-      &:hover{
+
+      &:hover {
         color: $color-primary;
-        .btn--small{
+
+        .btn--small {
           background-color: $color-primary;
         }
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;       }
-      .btn--small{
+
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+      }
+
+      .btn--small {
         position: absolute;
         top: 20px;
         left: 20px;
         padding: 8px 16px;
       }
-      &--info{
+
+      &--info {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         gap: 10px;
         padding: 2rem 1rem;
-        p{
+
+        p {
           color: $accent-color;
         }
       }
     }
   }
-  .info-review{
+
+  .info-review {
     display: flex;
     justify-content: space-between;
-    span{
+
+    span {
       align-items: flex-start;
       font-size: 14px;
     }
-    .fa-star{
+
+    .fa-star {
       font-size: 10px;
       color: #FDAE5C;
     }
-    a{
+
+    a {
       color: $accent-color;
     }
-    .clock{ 
+
+    .clock {
       display: flex;
       align-items: center;
       gap: 10px;
       font-size: 14px;
-     .fa-clock{
-      color: rgb(94, 93, 93);
-     }
+
+      .fa-clock {
+        color: rgb(94, 93, 93);
+      }
     }
   }
-  .btn--enter{
+
+  .btn--enter {
     position: relative;
   }
 }
+
 // enjoy video 
-.video{
+.video {
   display: flex;
   flex-direction: column;
-  &__container{
+
+  &__container {
     position: relative;
     overflow: hidden;
   }
-  &__title{
+
+  &__title {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-   gap: 2rem;
+    gap: 2rem;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    h3{
+
+    h3 {
       color: white;
     }
   }
-  &__btn{
+
+  &__btn {
     // overflow: hidden;
-      position: relative;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: $color-secondary;
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  cursor: pointer;
- 
-  i{
-    color: white;
-    z-index: 2;
-  }
- &::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: $color-secondary;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
-    transform: scale(0.8);
-    opacity: 0.6;
-    z-index: -1;
-    animation: pulse 2s infinite; 
-  }
-  @keyframes pulse {
-    0% {
-      transform: scale(1);
+    cursor: pointer;
+
+    i {
+      color: white;
+      z-index: 2;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: $color-secondary;
+      border-radius: 50%;
+      transform: scale(0.8);
       opacity: 0.6;
+      z-index: -1;
+      animation: pulse 2s infinite;
     }
-    50% {
-      transform: scale(1.5); 
-      opacity: 0.3;          
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        opacity: 0.6;
+      }
+
+      50% {
+        transform: scale(1.5);
+        opacity: 0.3;
+      }
+
+      100% {
+        transform: scale(2);
+        opacity: 0;
+      }
     }
-    100% {
-      transform: scale(2);   
-      opacity: 0;          
-    }
-  }
   }
 }
+
 // advantages
-.advantages{
+.advantages {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 5%;
-  &__card{
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-text-align: center;
-padding: 2rem;
-gap: 2rem;
-&--title{
-  line-height: 2;
-p{
-  color: $accent-color;
-  
-}
-}
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    gap: 2rem;
+
+    &--title {
+      line-height: 2;
+
+      p {
+        color: $accent-color;
+
+      }
+    }
   }
 }
+
 // quotes
-.quotes{
+.quotes {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   background-color: #F7FAFD;
   padding: 2rem;
-  &__card{
+
+  &__card {
     padding: 2rem;
     display: flex;
     flex-direction: column;
@@ -557,9 +552,11 @@ p{
     justify-content: center;
     text-align: center;
     gap: 2rem;
-    &--image{
-        position: relative;
-      i{
+
+    &--image {
+      position: relative;
+
+      i {
         font-size: 18px;
         position: absolute;
         background-color: $color-secondary;
@@ -570,27 +567,32 @@ p{
         right: -10px;
       }
     }
-    &--title{
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     justify-content: center;
+
+    &--title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       line-height: 2;
-      h4{
+
+      h4 {
         color: $accent-color;
       }
-      p{
-       
-      width: 70%;
+
+      p {
+
+        width: 70%;
       }
     }
-    &--dots{
+
+    &--dots {
       display: flex;
       gap: 10px;
       font-size: 12px;
       color: $accent-color;
       cursor: pointer;
-      .active{
+
+      .active {
         color: $color-primary;
       }
     }

@@ -149,8 +149,18 @@
   font-family: "Nothing You Could Do";
   font-size: 120px;
 }
+@media (max-width: 992px) {
+  .hero__title h3 {
+    font-size: 60px;
+  }
+}
 .hero__title p {
   font-size: 20px;
+}
+@media (max-width: 992px) {
+  .hero__title p {
+    line-height: 1.6;
+  }
 }
 
 .btn {
@@ -177,8 +187,19 @@
   font-size: 16px;
 }
 
+@media (max-width: 576px) {
+  .popular-destination__title {
+    padding: 0 0.7rem;
+  }
+}
 .popular-destination__title h3 {
   font-size: 38px;
+  text-align: center;
+}
+@media (max-width: 576px) {
+  .popular-destination__title h3 {
+    font-size: 30px;
+  }
 }
 .popular-destination__card p {
   font-size: 22px;
@@ -419,6 +440,11 @@ nav {
   align-items: center;
   justify-content: center;
 }
+@media (max-width: 992px) {
+  .hero {
+    height: 60vh;
+  }
+}
 .hero::before {
   position: absolute;
   content: " ";
@@ -456,6 +482,11 @@ nav {
   z-index: 999;
   transition: 0.2s ease-in;
 }
+@media (max-width: 992px) {
+  .hero .chevron-left {
+    display: none;
+  }
+}
 .hero .chevron-left:hover {
   background: #fff;
   color: black;
@@ -473,65 +504,106 @@ nav {
   transition: 0.2s ease-in;
   cursor: pointer;
 }
+@media (max-width: 992px) {
+  .hero .chevron--right {
+    display: none;
+  }
+}
 .hero .chevron--right:hover {
   background-color: #fff;
   color: #000;
 }
 
-.travel-query {
+.hero-query {
+  padding: 3.5rem 12%;
+  background-color: #040E27;
   color: #fff;
   gap: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #040E27;
-  width: 100%;
-  padding: 1.5rem 10%;
   overflow: hidden;
 }
-.travel-query input {
+@media (max-width: 992px) {
+  .hero-query {
+    flex-direction: column;
+    align-items: start;
+    gap: 15px;
+    padding: 3rem 4%;
+  }
+}
+.hero-query input {
   background-color: #040E27;
   color: #9ca1a5;
-  border: 0.5px #9ca1a5 solid;
+  border: 1px #9ca1a5 solid;
   border-radius: 5px;
   padding: 1rem 3rem 1rem 0.6rem;
 }
-.travel-query select {
+@media (max-width: 992px) {
+  .hero-query input {
+    width: 100%;
+  }
+}
+.hero-query select {
   background-color: #040E27;
   color: #9ca1a5;
-  border: 0.5px #9ca1a5 solid;
+  border: 1px #9ca1a5 solid;
   border-radius: 5px;
   padding: 0.8rem 5rem 0.8rem 0.4rem;
 }
-.travel-query select option {
+@media (max-width: 992px) {
+  .hero-query select {
+    width: 100%;
+  }
+}
+.hero-query select option {
   background-color: white;
   color: black;
 }
 
 .popular-destination {
-  padding-bottom: 7%;
+  padding: 3.5rem 12%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+@media (max-width: 992px) {
+  .popular-destination {
+    padding: 3rem 4%;
+  }
 }
 .popular-destination__title {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  text-align: center;
   gap: 30px;
-  padding-top: 10%;
-  padding-bottom: 2rem;
+  width: 47%;
+}
+@media (max-width: 992px) {
+  .popular-destination__title {
+    width: 100%;
+  }
 }
 .popular-destination__title p {
-  width: 40%;
   color: #9ca1a5;
+  text-align: center;
+  line-height: 1.6;
 }
 .popular-destination__container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
-  width: 80%;
-  margin: 0 auto;
-  padding: 2rem;
+}
+@media (max-width: 992px) {
+  .popular-destination__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 576px) {
+  .popular-destination__container {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 .popular-destination .popular-destination__card {
   overflow: hidden;
@@ -572,17 +644,29 @@ nav {
 }
 
 .subscribe {
+  padding: 3.5rem 12%;
   display: flex;
   justify-content: center;
+  gap: 2rem;
   align-items: center;
   position: relative;
   background-image: url(/src/images/subscribe.png);
   background-position: center;
   background-repeat: no-repeat;
-  padding: 3rem;
   background-size: cover;
   width: 100%;
   z-index: 1;
+}
+@media (max-width: 992px) {
+  .subscribe {
+    padding: 3rem 4%;
+  }
+}
+@media (max-width: 768px) {
+  .subscribe {
+    flex-direction: column;
+    align-items: start;
+  }
 }
 .subscribe::before {
   position: absolute;
@@ -595,37 +679,50 @@ nav {
   opacity: 0.7;
   z-index: -1;
 }
-.subscribe__form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  width: 60%;
-}
-.subscribe__container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-  padding: 1rem;
-}
-.subscribe__container input {
-  border: 1px rgba(0, 0, 0, 0.188) solid;
-  border-radius: 5px;
-  padding: 1rem;
-  width: 80%;
-}
 .subscribe__title {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  width: 40%;
+  width: 35%;
+}
+@media (max-width: 768px) {
+  .subscribe__title {
+    width: 100%;
+  }
 }
 .subscribe__title h4 {
   color: white;
 }
 .subscribe__title p {
   color: #9ca1a5;
+}
+.subscribe__form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 47%;
+}
+@media (max-width: 768px) {
+  .subscribe__form {
+    width: 100%;
+    flex-direction: column;
+    align-items: start;
+  }
+}
+.subscribe__form input {
+  border: 1px rgba(0, 0, 0, 0.188) solid;
+  border-radius: 5px;
+  padding: 1rem;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .subscribe__form .btn--enter {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .popular-places {
