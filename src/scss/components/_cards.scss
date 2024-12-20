@@ -1,0 +1,269 @@
+// popular places
+.popular-places {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    background-color: #F7FAFD;
+    padding: 3.5rem 12%;
+  
+    @include for-desktop-up {
+      padding: 3rem 4%;
+    }
+  
+    &__title {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      gap: 20px;
+  
+      p {
+        color: $accent-color;
+      }
+    }
+  
+    &__container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+  
+      @include for-tablet-landscape-up {
+        grid-template-columns: repeat(2, 1fr);
+      }
+  
+      @include for-phone-only {
+        grid-template-columns: repeat(1, 1fr);
+      }
+  
+      .popular-places__card {
+        overflow: hidden;
+        border: 1px solid rgba(0, 0, 0, 0.072);
+        border-radius: 10px;
+        background-color: white;
+        position: relative;
+        transition: 0.4s ease;
+  
+        &:hover {
+          color: $color-primary;
+  
+          .btn--small {
+            background-color: $color-primary;
+          }
+  
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+        }
+  
+        .btn--small {
+          position: absolute;
+          top: 20px;
+          left: 20px;
+          padding: 8px 16px;
+        }
+  
+        &--info {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          gap: 10px;
+          padding: 2rem 1rem;
+  
+          p {
+            color: $accent-color;
+          }
+        }
+      }
+    }
+  
+    .info-review {
+      display: flex;
+      justify-content: space-between;
+  
+      span {
+        align-items: flex-start;
+        font-size: 14px;
+      }
+  
+      .fa-star {
+        font-size: 10px;
+        color: #FDAE5C;
+      }
+  
+      a {
+        color: $accent-color;
+      }
+  
+      .clock {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 14px;
+  
+        .fa-clock {
+          color: rgb(94, 93, 93);
+        }
+      }
+    }
+  
+    .btn--enter {
+      position: relative;
+    }
+  }
+  // advantages
+.advantages {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 3.5rem 12%;
+  
+    @include for-desktop-up {
+      padding: 3rem 4%;
+    }
+  
+    @include for-tablet-landscape-up {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    @include for-phone-only {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  
+    &__card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+      gap: 2rem;
+  
+      &--title {
+        line-height: 2;
+  
+        p {
+          color: $accent-color;
+        }
+      }
+    }
+  }
+  // quotes
+.quotes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #F7FAFD;
+    padding: 3.5rem 12%;
+  
+    @include for-desktop-up {
+      padding: 3rem 4%;
+    }
+  
+    &__card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      width: 60%;
+      margin: 0 auto;
+  
+      @include for-desktop-up {
+        width: 100%;
+      }
+  
+      &--image {
+        position: relative;
+  
+        i {
+          font-size: 18px;
+          position: absolute;
+          background-color: $color-secondary;
+          border-radius: 50%;
+          color: white;
+          padding: 1rem;
+          bottom: -10px;
+          right: -10px;
+        }
+      }
+  
+      &--title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        line-height: 2;
+  
+        h4 {
+          color: $accent-color;
+        }
+  
+  
+      }
+  
+      &--dots {
+        display: flex;
+        gap: 10px;
+        font-size: 12px;
+        color: $accent-color;
+        cursor: pointer;
+  
+        .active {
+          color: $color-primary;
+        }
+      }
+    }
+  }
+  // trips
+.trips{
+    padding: 3.5rem 12%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    @include for-desktop-up {
+      padding: 3rem 4%;
+  
+    }
+    
+    &__container{
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 2rem;
+      @include for-desktop-up {
+        grid-template-columns: repeat(2, 1fr);
+  
+      }
+  
+      @include for-phone-only {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+    &__card{
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      h3{
+        text-align: start;
+        transition: 0.2s ease;
+      }
+      &:hover{
+        h3{
+          color: $color-primary;
+        }
+      }
+      img{
+        border-radius: 5px;
+      }
+     
+      &--title{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        span{
+          color: $accent-color;
+        }
+      }
+    }
+  }
