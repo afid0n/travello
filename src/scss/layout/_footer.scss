@@ -45,6 +45,7 @@ footer{
         display: flex;
         flex-direction: column;
         justify-content: start;
+        align-items: center;
         gap: 2rem;
         ul{
             display: flex;
@@ -58,7 +59,7 @@ footer{
         display: flex;
         flex-direction: column;
        h3{
-        gap: 2rem;
+        padding-bottom: 2rem;
        }
        
         ul{
@@ -71,5 +72,27 @@ footer{
         }
 
     }
+    &__instagram{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        gap: 2rem;
+        &--container{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 1rem;
+            img{
+                border-radius: 5px;
+            }
+        }
+    }
+    &__end{
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        border-top: 1px solid $accent-color;
+        padding-top: 2rem;
+        }
 }
+
 }

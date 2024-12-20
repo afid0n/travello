@@ -110,6 +110,85 @@
       position: relative;
     }
   }
+  // enjoy video 
+.video {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    &__container {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    
+    }
+  
+    &__title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+  
+      h3 {
+        color: white;
+      }
+    }
+  
+    &__btn {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $color-secondary;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      cursor: pointer;
+  
+      i {
+        color: white;
+        z-index: 2;
+      }
+  
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: $color-secondary;
+        border-radius: 50%;
+        transform: scale(0.8);
+        opacity: 0.6;
+        z-index: -1;
+        animation: pulse 2s infinite;
+      }
+  
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+          opacity: 0.6;
+        }
+  
+        50% {
+          transform: scale(1.5);
+          opacity: 0.3;
+        }
+  
+        100% {
+          transform: scale(2);
+          opacity: 0;
+        }
+      }
+    }
+  }
   // advantages
 .advantages {
     display: grid;
