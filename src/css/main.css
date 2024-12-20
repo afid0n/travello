@@ -267,11 +267,34 @@ footer a, footer span {
   font-size: 14px;
 }
 
+.hero-about--title {
+  line-height: 2;
+}
+.hero-about--title h3 {
+  font-family: "Nothing You Could Do";
+  font-size: 80px;
+}
+@media (max-width: 768px) {
+  .hero-about--title h3 {
+    font-size: 60px;
+  }
+}
+.hero-about--title p {
+  font-size: 18px;
+}
+@media (max-width: 768px) {
+  .hero-about--title p {
+    font-size: 15px;
+  }
+}
+
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: fixed;
+  top: 0;
+  left: 0;
   z-index: 999;
   width: 100%;
   background-color: #fff;
@@ -1183,4 +1206,54 @@ footer .footer__end {
 }
 .popular-destination .popular-destination__card:hover p {
   color: #FF4A52;
+}
+
+.hero-about {
+  position: relative;
+  width: 100%;
+  background-image: url(/src/images/about-hero.png);
+  height: 60vh;
+  margin-top: 110px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 992px) {
+  .hero-about {
+    height: 40vh;
+    margin-top: 70px;
+  }
+}
+@media (max-width: 768px) {
+  .hero-about {
+    height: 50vh;
+  }
+}
+.hero-about::before {
+  position: absolute;
+  content: " ";
+  background-color: #040E27;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.1;
+}
+.hero-about--title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 3rem;
+  line-height: 1;
+  gap: 5px;
+  z-index: 3;
+  color: white;
+}
+.hero-about--title p {
+  text-align: center;
+  padding-bottom: 2rem;
 }/*# sourceMappingURL=main.css.map */
