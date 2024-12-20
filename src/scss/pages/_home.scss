@@ -460,10 +460,11 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-     width: 100%;
+    width: 100%;
+
     h3 {
       color: white;
-     }
+    }
   }
 
   &__btn {
@@ -517,11 +518,18 @@
 
 // advantages
 .advantages {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 5%;
-
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  padding: 3.5rem 12%;
+ @include for-desktop-up{
+  padding: 3rem 4%;
+ }
+ @include for-tablet-landscape-up{
+  grid-template-columns: repeat(2,1fr);
+ }
+ @include for-phone-only{
+  grid-template-columns: repeat(1,1fr);
+ }
   &__card {
     display: flex;
     flex-direction: column;
@@ -536,7 +544,6 @@
 
       p {
         color: $accent-color;
-
       }
     }
   }
@@ -586,10 +593,7 @@
         color: $accent-color;
       }
 
-      p {
-
-        width: 70%;
-      }
+ 
     }
 
     &--dots {

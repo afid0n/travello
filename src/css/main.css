@@ -896,10 +896,24 @@ nav {
 }
 
 .advantages {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 5%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 3.5rem 12%;
+}
+@media (max-width: 992px) {
+  .advantages {
+    padding: 3rem 4%;
+  }
+}
+@media (max-width: 768px) {
+  .advantages {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 576px) {
+  .advantages {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 .advantages__card {
   display: flex;
@@ -956,9 +970,6 @@ nav {
 }
 .quotes__card--title h4 {
   color: #9ca1a5;
-}
-.quotes__card--title p {
-  width: 70%;
 }
 .quotes__card--dots {
   display: flex;
