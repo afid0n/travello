@@ -124,6 +124,12 @@
         h3 {
             font-family: 'Nothing You Could Do';
             font-size: 80px;
+
+            @include for-tablet-landscape-up {
+                font-size: 45px;
+                text-align: center;
+                width: 100%;
+            }
         }
     }
 }
