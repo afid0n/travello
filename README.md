@@ -9,7 +9,9 @@ This project is a responsive travel website built using HTML and CSS. This websi
   Clone this repository:
    ```bash
    git clone https://github.com/afid0n/travello.git
-##*Screenshots*
+*Screenshots*
+![Screenshot 2024-12-21 011417](https://github.com/user-attachments/assets/379c43e9-62b4-444b-9b36-8516134399a4)
+
  ## Folder Structure
  ## Future Improvements
 - Add interactivity using JavaScript for dynamic behavior.
