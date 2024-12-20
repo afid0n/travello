@@ -152,3 +152,28 @@
         
     }
 }
+.trips{ 
+    &__title{
+        h3{
+            font-size: 38px;
+        }
+    }
+.trips__card{
+    &--title{
+        h3{
+            font-size: 22px;
+        }
+        span{
+            font-size: 14px;
+        }
+    }
+}
+}
+footer{
+    h3{
+        font-size: 20px;
+    }
+    a,span{
+        font-size: 14px;
+    }
+}

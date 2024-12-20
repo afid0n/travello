@@ -1,0 +1,75 @@
+footer{
+    padding: 3.5rem 12%;
+    background-color: $color-background;
+    a,i{
+        color: $accent-color;
+        transition: 0.4s ease;
+        &:hover{
+            color: $color-primary;
+        }
+    }
+    .colorlib{
+        color: $color-primary;
+    }
+    h3{
+        color: white;
+    }
+    span,p{
+        color: $accent-color;
+    }
+.footer{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2rem;
+    padding: 2rem 0;
+  
+    &__social{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        gap: 10px;
+        &--logo{
+            padding-bottom: 2rem;
+        }
+        ul{
+            padding: 3rem 1rem;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            i{
+                font-size: 15px;
+            }
+        }
+    }
+    &__company{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        gap: 2rem;
+        ul{
+            display: flex;
+            flex-direction: column;
+            li{
+                line-height: 2;
+            }
+        }
+    }
+    &__destination{
+        display: flex;
+        flex-direction: column;
+       h3{
+        gap: 2rem;
+       }
+       
+        ul{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+        li{
+          line-height: 2
+        };
+            
+        }
+
+    }
+}
+}
