@@ -1,5 +1,5 @@
 # Travel Website: Travello
-##Description
+## Description
 This project is a responsive travel website built using HTML and CSS. This website includes home,about,destination,blog--single-blog,contact pages. The website adapts to various screen sizes.
 ## Technologies Used
 - HTML5
@@ -9,7 +9,7 @@ This project is a responsive travel website built using HTML and CSS. This websi
   Clone this repository:
    ```bash
    git clone https://github.com/afid0n/travello.git
-*Screenshots*
+## *Screenshots*
 ![Screenshot 2024-12-21 011417](https://github.com/user-attachments/assets/379c43e9-62b4-444b-9b36-8516134399a4)
 
  ## Folder Structure
