@@ -334,20 +334,21 @@
   align-items: center;
   gap: 2rem;
   background-color: #F7FAFD;
-  padding-bottom: 10%;
+  padding: 3.5rem 12%;
+
+  @include for-desktop-up {
+    padding: 3rem 4%;
+  }
 
   &__title {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 10%;
-    padding-bottom: 2rem;
     text-align: center;
     gap: 20px;
 
     p {
-      width: 55%;
       color: $accent-color;
     }
   }
@@ -356,8 +357,14 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    padding-bottom: 2rem;
-    width: 80%;
+
+    @include for-tablet-landscape-up {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include for-phone-only {
+      grid-template-columns: repeat(1, 1fr);
+    }
 
     .popular-places__card {
       overflow: hidden;

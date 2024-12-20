@@ -731,28 +731,38 @@ nav {
   align-items: center;
   gap: 2rem;
   background-color: #F7FAFD;
-  padding-bottom: 10%;
+  padding: 3.5rem 12%;
+}
+@media (max-width: 992px) {
+  .popular-places {
+    padding: 3rem 4%;
+  }
 }
 .popular-places__title {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 10%;
-  padding-bottom: 2rem;
   text-align: center;
   gap: 20px;
 }
 .popular-places__title p {
-  width: 55%;
   color: #9ca1a5;
 }
 .popular-places__container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-  padding-bottom: 2rem;
-  width: 80%;
+}
+@media (max-width: 768px) {
+  .popular-places__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 576px) {
+  .popular-places__container {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 .popular-places__container .popular-places__card {
   overflow: hidden;
