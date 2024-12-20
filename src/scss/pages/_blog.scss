@@ -1,0 +1,49 @@
+.hero-blog{
+    position: relative;
+    width: 100%;
+    background-image: url(/src/images/hero-blog.png);
+    height: 60vh;
+    margin-top: 110px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include for-desktop-up{
+        height: 40vh;
+        margin-top: 70px;
+    }
+    @include for-tablet-landscape-up{
+        height: 50vh;
+    }
+    &::before {
+        position: absolute;
+        content: " ";
+        background-color: $color-background;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0.1;
+      }
+      
+      &--title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 3rem;
+        line-height: 1;
+        gap: 5px;
+        z-index: 3;
+        color: white;
+    
+        p {
+          text-align: center;
+          padding-bottom: 2rem;
+        }
+      }
+    
+    }
+    
