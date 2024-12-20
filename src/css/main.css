@@ -422,6 +422,11 @@ footer {
   padding: 3.5rem 12%;
   background-color: #040E27;
 }
+@media (max-width: 992px) {
+  footer {
+    padding: 3rem 4%;
+  }
+}
 footer a, footer i {
   color: #9ca1a5;
   transition: 0.4s ease;
@@ -435,6 +440,9 @@ footer .colorlib {
 footer h3 {
   color: white;
 }
+footer span {
+  text-align: center;
+}
 footer span, footer p {
   color: #9ca1a5;
 }
@@ -443,6 +451,16 @@ footer .footer {
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
   padding: 2rem 0;
+}
+@media (max-width: 992px) {
+  footer .footer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 576px) {
+  footer .footer {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 footer .footer__social {
   display: flex;
@@ -468,6 +486,11 @@ footer .footer__company {
   justify-content: start;
   align-items: center;
   gap: 2rem;
+}
+@media (max-width: 992px) {
+  footer .footer__company {
+    align-items: start;
+  }
 }
 footer .footer__company ul {
   display: flex;

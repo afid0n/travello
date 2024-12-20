@@ -1,6 +1,11 @@
 footer{
     padding: 3.5rem 12%;
     background-color: $color-background;
+    @include for-desktop-up {
+        padding: 3rem 4%;
+    
+      }
+    
     a,i{
         color: $accent-color;
         transition: 0.4s ease;
@@ -14,6 +19,9 @@ footer{
     h3{
         color: white;
     }
+    span{
+        text-align: center;
+    }
     span,p{
         color: $accent-color;
     }
@@ -22,6 +30,14 @@ footer{
     grid-template-columns: repeat(4,1fr);
     gap: 2rem;
     padding: 2rem 0;
+    @include for-desktop-up {
+        grid-template-columns: repeat(2, 1fr);
+  
+      }
+  
+      @include for-phone-only {
+        grid-template-columns: repeat(1, 1fr);
+      }
   
     &__social{
         display: flex;
@@ -47,6 +63,9 @@ footer{
         justify-content: start;
         align-items: center;
         gap: 2rem;
+        @include for-desktop-up{
+            align-items: start;
+        }
         ul{
             display: flex;
             flex-direction: column;
