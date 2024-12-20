@@ -149,8 +149,18 @@
   font-family: "Nothing You Could Do";
   font-size: 120px;
 }
+@media (max-width: 992px) {
+  .hero__title h3 {
+    font-size: 60px;
+  }
+}
 .hero__title p {
   font-size: 20px;
+}
+@media (max-width: 992px) {
+  .hero__title p {
+    line-height: 1.6;
+  }
 }
 
 .btn {
@@ -419,6 +429,11 @@ nav {
   align-items: center;
   justify-content: center;
 }
+@media (max-width: 992px) {
+  .hero {
+    height: 60vh;
+  }
+}
 .hero::before {
   position: absolute;
   content: " ";
@@ -456,6 +471,11 @@ nav {
   z-index: 999;
   transition: 0.2s ease-in;
 }
+@media (max-width: 992px) {
+  .hero .chevron-left {
+    display: none;
+  }
+}
 .hero .chevron-left:hover {
   background: #fff;
   color: black;
@@ -472,6 +492,11 @@ nav {
   z-index: 999;
   transition: 0.2s ease-in;
   cursor: pointer;
+}
+@media (max-width: 992px) {
+  .hero .chevron--right {
+    display: none;
+  }
 }
 .hero .chevron--right:hover {
   background-color: #fff;

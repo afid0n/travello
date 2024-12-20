@@ -11,7 +11,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
+  @include for-desktop-up {
+     height: 60vh;
+}
   &::before {
     position: absolute;
     content: " ";
@@ -51,7 +53,9 @@
     cursor: pointer;
     z-index: 999;
     transition: 0.2s ease-in;
-
+    @include for-desktop-up{
+     display: none;
+    }
     &:hover {
       background: #fff;
       color: black;
@@ -70,7 +74,9 @@
     z-index: 999;
     transition: 0.2s ease-in;
     cursor: pointer;
-
+    @include for-desktop-up{
+      display: none;
+     }
     &:hover {
       background-color: #fff;
       color: #000;

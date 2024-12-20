@@ -1,8 +1,8 @@
 @import"./base/reset";
 @import"./base/fonts";
+@import"./abstracts/mixins";
 @import"./base/typography";
 @import"./abstracts/variables";
-@import"./abstracts/mixins";
 @import"./layout/header";
 @import"./components/buttons";
 @import"./components/forms";
