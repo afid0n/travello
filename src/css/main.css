@@ -1395,6 +1395,9 @@ footer .footer__end {
   align-items: center;
   gap: 4rem;
 }
+.story__image img {
+  width: 100%;
+}
 @media (max-width: 576px) {
   .story__image {
     flex-direction: column;
