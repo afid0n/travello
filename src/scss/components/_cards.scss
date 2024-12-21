@@ -5,7 +5,7 @@
     align-items: center;
     gap: 2rem;
     background-color: #F7FAFD;
-    padding: 3.5rem 12%;
+    padding: 3.5rem 12%; 
   
     @include for-desktop-up {
       padding: 3rem 4%;
@@ -25,6 +25,7 @@
     }
   
     &__container {
+      border: 1px solid pink;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 2rem;
