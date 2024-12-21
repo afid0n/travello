@@ -639,6 +639,7 @@ footer .footer__instagram--container {
   gap: 1rem;
 }
 footer .footer__instagram--container img {
+  width: 100%;
   border-radius: 5px;
 }
 footer .footer__end {
@@ -1436,6 +1437,103 @@ footer .footer__end {
 .hero-destination--title p {
   text-align: center;
   padding-bottom: 2rem;
+}
+
+.destinations {
+  padding: 3.5rem 12%;
+  display: flex;
+  justify-content: center;
+  background-color: #F7FAFD;
+}
+.destinations__price {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.destinations__price--container {
+  border: 1px solid #9ca1a5;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: start;
+  gap: 2rem;
+}
+
+.range-slider {
+  height: 5px;
+  position: relative;
+  background-color: #e1e9f6;
+  border-radius: 2px;
+}
+
+.range-selected {
+  height: 100%;
+  left: 30%;
+  right: 30%;
+  position: absolute;
+  border-radius: 5px;
+  background-color: #1b53c0;
+}
+
+.range-input {
+  position: relative;
+}
+
+.range-input input {
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  top: -7px;
+  background: none;
+  pointer-events: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.range-input input::-webkit-slider-thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 3px solid #1b53c0;
+  background-color: #fff;
+  pointer-events: auto;
+  -webkit-appearance: none;
+}
+
+.range-input input::-moz-range-thumb {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  border: 3px solid #1b53c0;
+  background-color: #fff;
+  pointer-events: auto;
+  -moz-appearance: none;
+}
+
+.range-price {
+  margin: 30px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.range-price label {
+  margin-right: 5px;
+}
+
+.range-price input {
+  width: 80px;
+  padding: 5px;
+}
+
+.range-price input:first-of-type {
+  margin-right: 15px;
+}
+
+.popular-places .destination-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .hero-blog {
