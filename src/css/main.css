@@ -379,6 +379,13 @@ footer a, footer span {
   font-size: 60px;
 }
 
+.destinations__price h3 {
+  font-weight: 500;
+}
+.destinations__price--container select {
+  font-size: 16px;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -685,6 +692,15 @@ footer .footer__end {
   background-color: #FF4A52;
 }
 
+.btn--enter, .reset {
+  width: 100%;
+  text-align: center;
+}
+.btn--enter a, .reset a {
+  color: white;
+  font-weight: 500;
+}
+
 .hero-query {
   padding: 3.5rem 12%;
   background-color: #040E27;
@@ -839,6 +855,7 @@ footer .footer__end {
   color: #9ca1a5;
 }
 .popular-places__container {
+  border: 1px solid pink;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
@@ -1443,20 +1460,35 @@ footer .footer__end {
   padding: 3.5rem 12%;
   display: flex;
   justify-content: center;
+  align-items: start;
   background-color: #F7FAFD;
+  gap: 2rem;
 }
 .destinations__price {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  width: 35%;
   gap: 2rem;
 }
 .destinations__price--container {
-  border: 1px solid #9ca1a5;
+  padding: 1rem;
+  border: 1px solid #DEE2E7;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: start;
-  gap: 2rem;
+  gap: 1rem;
+  width: 100%;
+}
+.destinations__price--container select {
+  border: 1px solid #DEE2E7;
+  background-color: #F7FAFD;
+  border-radius: 10px;
+  width: 100%;
+  padding: 1rem 2rem;
+  color: #9ca1a5;
 }
 
 .range-slider {
@@ -1472,7 +1504,7 @@ footer .footer__end {
   right: 30%;
   position: absolute;
   border-radius: 5px;
-  background-color: #1b53c0;
+  background-color: #FF4A52;
 }
 
 .range-input {
@@ -1494,7 +1526,7 @@ footer .footer__end {
   height: 20px;
   width: 20px;
   border-radius: 50%;
-  border: 3px solid #1b53c0;
+  border: 3px solid #FF4A52;
   background-color: #fff;
   pointer-events: auto;
   -webkit-appearance: none;
@@ -1504,13 +1536,14 @@ footer .footer__end {
   height: 15px;
   width: 15px;
   border-radius: 50%;
-  border: 3px solid #1b53c0;
+  border: 3px solid #FF4A52;
   background-color: #fff;
   pointer-events: auto;
   -moz-appearance: none;
 }
 
 .range-price {
+  color: #9ca1a5;
   margin: 30px 0;
   width: 100%;
   display: flex;
@@ -1523,6 +1556,7 @@ footer .footer__end {
 }
 
 .range-price input {
+  color: #9ca1a5;
   width: 80px;
   padding: 5px;
 }
@@ -1531,7 +1565,10 @@ footer .footer__end {
   margin-right: 15px;
 }
 
-.popular-places .destination-cards {
+.popular-places, .destination {
+  padding: 0;
+}
+.popular-places .destination-cards, .destination .destination-cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
