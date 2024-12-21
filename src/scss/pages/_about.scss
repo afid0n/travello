@@ -1,87 +1,124 @@
-.hero-about{
+.hero-about {
     position: relative;
-width: 100%;
-background-image: url(/src/images/about-hero.png);
-height: 60vh;
-margin-top: 110px;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-display: flex;
-align-items: center;
-justify-content: center;
-@include for-desktop-up{
-    height: 40vh;
-    margin-top: 70px;
-}
-@include for-tablet-landscape-up{
-    height: 50vh;
-}
-&::before {
-    position: absolute;
-    content: " ";
-    background-color: $color-background;
-    height: 100%;
     width: 100%;
-    top: 0;
-    left: 0;
-    opacity: 0.1;
-  }
-  
-  &--title {
+    background-image: url(/src/images/about-hero.png);
+    height: 60vh;
+    margin-top: 110px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 3rem;
-    line-height: 1;
-    gap: 5px;
-    z-index: 3;
-    color: white;
 
-    p {
-      text-align: center;
-      padding-bottom: 2rem;
+    @include for-desktop-up {
+        height: 40vh;
+        margin-top: 70px;
     }
-  }
 
-}
-// our story section
-.story{
-    padding: 3.5rem 12%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-        align-items: center;
-    &__title{
+    @include for-tablet-landscape-up {
+        height: 50vh;
+    }
+
+    &::before {
+        position: absolute;
+        content: " ";
+        background-color: $color-background;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0.1;
+    }
+
+    &--title {
         display: flex;
         flex-direction: column;
-        justify-content: start;
-        align-items: start;
-        gap: 3rem;
-        margin-bottom: 2rem;
-        h3{
-            text-align: start;
-        }
-        p{
-            color: $accent-color;
+        align-items: center;
+        justify-content: center;
+        padding-top: 3rem;
+        line-height: 1;
+        gap: 5px;
+        z-index: 3;
+        color: white;
+
+        p {
+            text-align: center;
+            padding-bottom: 2rem;
         }
     }
-    &__image{
+
+}
+
+// our story section
+.story {
+    padding: 3.5rem 17%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 2rem;
+
+    @include for-tablet-landscape-up {
+        padding: 3.5rem 4%;
+
+    }
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+        // justify-content: center;
+        align-items: start;
+        gap: 2rem;
+        // margin-bottom: 2rem;
+        width: 80%;
+
+        @include for-phone-only {
+            width: 100%;
+        }
+
+        p {
+            line-height: 2;
+            color: $accent-color;
+
+        }
+    }
+
+    &__image {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 2rem;
+        gap: 4rem;
+
+        @include for-phone-only {
+            flex-direction: column;
+
+            img {
+                width: 100%;
+            }
+        }
     }
-    &__numbers{
+
+    &__numbers {
+        padding-left: 2rem 1rem 0 1rem;
         display: flex;
-        gap: 2rem;
-        &--card{
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        @include for-phone-only {
+            flex-direction: column;
+            gap: 2.4rem;
+            padding: 2rem;
+        }
+        &--card {
             display: flex;
             flex-direction: column;
-            span{
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+
+            span {
                 color: $color-primary;
             }
         }
     }
-    }
+}

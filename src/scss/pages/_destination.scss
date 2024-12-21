@@ -1,23 +1,26 @@
-.hero-destination{
-position: relative;
-width: 100%;
-background-image: url(/src/images/destination.png);
-height: 60vh;
-margin-top: 110px;
-background-position: center;
-background-repeat: no-repeat;
-background-size: auto;
-display: flex;
-align-items: center;
-justify-content: center;
-@include for-desktop-up{
+.hero-destination {
+  position: relative;
+  width: 100%;
+  background-image: url(/src/images/destination.png);
+  height: 60vh;
+  margin-top: 110px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include for-desktop-up {
     height: 40vh;
     margin-top: 70px;
-}
-@include for-tablet-landscape-up{
+  }
+
+  @include for-tablet-landscape-up {
     height: 50vh;
-}
-&::before {
+  }
+
+  &::before {
     position: absolute;
     content: " ";
     background-color: $color-background;
@@ -27,7 +30,7 @@ justify-content: center;
     left: 0;
     opacity: 0.2;
   }
-  
+
   &--title {
     display: flex;
     flex-direction: column;
@@ -46,111 +49,167 @@ justify-content: center;
   }
 
 }
-.destinations{
+
+.destinations {
   padding: 3.5rem 12%;
   display: flex;
- justify-content: center;
- align-items: start;
- background-color: #F7FAFD;
- gap: 2rem;
- &__price{
-  display: flex;
-  flex-direction: column;
   justify-content: center;
-  width: 35%;
- gap: 2rem;
-  &--container{
-    padding: 1rem;
-    border: 1px solid #DEE2E7;
-    border-radius: 10px;
+  align-items: start;
+  background-color: #F7FAFD;
+  gap: 2rem;
+
+    @include for-desktop-up {
+      align-items: center;
+      padding: 3rem 4%;
+      flex-direction: column;
+    }
+
+
+  &__price {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: start;
-    gap: 1rem;
-    width: 100%;
-    select{
-      border: 1px solid #DEE2E7;
-      background-color: #F7FAFD;
-      border-radius: 10px;
+    justify-content: center;
+    width: 35%;
+    gap: 2rem;
+
+    @include for-desktop-up {
       width: 100%;
-      padding: 1rem 2rem;
-      color: $accent-color;
-      
     }
-  
+
+    &--container {
+      padding: 1rem;
+      border: 1px solid #DEE2E7;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: start;
+      gap: 1rem;
+      width: 100%;
+
+      select {
+        border: 1px solid #DEE2E7;
+        background-color: #F7FAFD;
+        border-radius: 10px;
+        width: 100%;
+        padding: 1rem 2rem;
+        color: $accent-color;
+
+      }
+      .slider-wrapper {
+         width: 100%;
+         border-radius: 10px;
+         .price-input {
+          width: 100%;
+          margin: 30px 0 35px;
+        }
+        .price-input .field {
+          display: flex;
+          width: 100%;
+          height: 45px;
+          align-items: center;
+        }
+        .field input {
+          width: 100%;
+          height: 100%;
+          outline: none;
+          font-size: 19px;
+          margin-left: 12px;
+          border-radius: 5px;
+          text-align: center;
+          border: 1px solid #999;
+          -moz-appearance: textfield;
+        }
+        input[type="number"]::-webkit-outer-spin-button,
+        input[type="number"]::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+        }
+        .price-input .seperator {
+          width: 130px;
+          display: flex;
+          font-size: 19px;
+          align-items: center;
+          justify-content: center;
+        }
+        .slider {
+          height: 5px;
+          position: relative;
+          background: #ddd;
+          border-radius: 5px;
+        }
+        .slider .progress {
+          height: 100%;
+          left: 25%;
+          right: 25%;
+          position: absolute;
+          border-radius: 5px;
+          background-color: $color-primary;
+        }
+        .range-input {
+          position: relative;
+        }
+        .range-input input {
+          position: absolute;
+          width: 100%;
+          height: 5px;
+          top: -5px;
+          background: none;
+          pointer-events: none;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+        }
+        input[type="range"]::-webkit-slider-thumb {
+          height: 17px;
+          width: 17px;
+          border-radius: 50%;
+          background-color: white;
+          border: 2px solid $color-primary;
+          pointer-events: auto;
+          -webkit-appearance: none;
+          box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+        }
+        input[type="range"]::-moz-range-thumb {
+          height: 17px;
+          width: 17px;
+          border: none;
+          border-radius: 50%;
+          background: #000;
+          pointer-events: auto;
+          -moz-appearance: none;
+          box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+        }
+        
+      }
+      .slider-numbers{
+        padding: 1rem;
+       font-size: 17px;
+        color: $accent-color;
+      }
+    }
   }
- }
+  .btn--enter , .reset{
+    width: 100%;
+     text-align: center;
+     a{
+     color: white;
+     font-weight: 500;
+     }
+   }
 }
+
 // prise-range
-.range-slider {
-  height: 5px;
-  position: relative;
-  background-color: #e1e9f6;
-  border-radius: 2px;
-}
-.range-selected {
-  height: 100%;
-  left: 30%;
-  right: 30%;
-  position: absolute;
-  border-radius: 5px;
-  background-color: $color-primary;
-}
-.range-input {
-  position: relative;
-}
-.range-input input {
-  position: absolute;
-  width: 100%;
-  height: 5px;
-  top: -7px;
-  background: none;
-  pointer-events: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-}
-.range-input input::-webkit-slider-thumb {
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-  border: 3px solid $color-primary;
-  background-color: #fff;
-  pointer-events: auto;
-  -webkit-appearance: none;
-}
-.range-input input::-moz-range-thumb {
-  height: 15px;
-  width: 15px;
-  border-radius: 50%;
-  border: 3px solid $color-primary;
-  background-color: #fff;
-  pointer-events: auto;
-  -moz-appearance: none;
-}
-.range-price {
-  color: $accent-color;
-  margin: 30px 0;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.range-price label {
-  margin-right: 5px;
-}
-.range-price input {
-  color: $accent-color;
-  width: 80px;
-  padding: 5px;
-}
-.range-price input:first-of-type {
-  margin-right: 15px;
-}
-.popular-places , .destination{
+ 
+// popular-places
+.destination {
   padding: 0;
-   .destination-cards{
+
+  .destination-cards {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
+    @include for-phone-only{
+      grid-template-columns: repeat(1, 1fr);
+
+    }
   }
+ 
 }

@@ -268,14 +268,15 @@ footer{
     }
 }
 .story{
-    &__title{
-        h3{
-            font-size: 38px;
-        }
-    }
+    &__numbers--card{
     span{
         font-size: 60px;
-    }
+       }
+}
+.heading{
+    font-size: 30px;
+
+}
 }
 .destinations__price{
     h3{
