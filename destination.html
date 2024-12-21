@@ -92,10 +92,43 @@
     </section>
     <section class="destinations">
       <div class="destinations__price">
-        
+        <h3>Filter Result</h3>
+        <div class="destinations__price--container">
+          <select name="country" id="country">
+            <option value="option">Country</option>
+            <option value="option">Africa</option>
+            <option value="option">Canada</option>
+            <option value="option">USA</option>
+          </select>
+          <select name="travel-type" id="travel-type">
+            <option value="option">Travel type</option>
+            <option value="option">advance</option>
+            <option value="option">advance</option>
+            <option value="option">premium</option>
+          </select>
+          <span>Price range</span>
+          <div class="range">
+            <div class="range-slider">
+              <span class="range-selected"></span>
+            </div>
+            <div class="range-input">
+              <input type="range" class="min" min="0" max="1000" value="300" step="10">
+              <input type="range" class="max" min="0" max="1000" value="700" step="10">
+            </div>
+            <div class="range-price">      
+              <label for="min">$</label>
+              <input type="number" name="min" value="75">      
+              <label for="max">$</label>
+              <input type="number" name="max" value="380">      
+            </div>
+          </div> 
+          <div class="btn--enter">
+            <a href="#">Reset</a>
+          </div>
+        </div>
       </div>
       <section class="popular-places">
-        <div class="popular-places__container">
+        <div class="popular-places__container destination-cards">
           <div class="popular-places__card">
             <img src="/src/images/California.png" alt="California">
             <a href="#" class="btn--small">$500</a>
