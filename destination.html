@@ -91,7 +91,7 @@
       <a href="#" class="btn--enter">Search</a>
     </section>
     <section class="destinations">
-      <div class="destinations__price">
+     <div class="destinations__price">
         <h3>Filter Result</h3>
         <div class="destinations__price--container">
           <select name="country" id="country">
@@ -107,28 +107,26 @@
             <option value="option">premium</option>
           </select>
           <span>Price range</span>
-          <div class="range">
-            <div class="range-slider">
-              <span class="range-selected"></span>
+          <div class="slider-wrapper">
+            <div class="slider">
+              <div class="progress"></div>
             </div>
             <div class="range-input">
-              <input type="range" class="min" min="0" max="1000" value="300" step="10">
-              <input type="range" class="max" min="0" max="1000" value="700" step="10">
-            </div>
-            <div class="range-price">      
-              <label for="min">$</label>
-              <input type="number" name="min" value="75">      
-              <label for="max">$</label>
-              <input type="number" name="max" value="380">      
-            </div>
-          </div> 
+              <input type="range" class="range-min" min="0" max="10000" value="2500" step="100">
+              <input type="range" class="range-max" min="0" max="10000"
+              value="7500" step="100">
+             <div class="slider-numbers">
+              <span>$75-$380</span>
+             </div>
+          </div>
+          </div>
           <div class="btn--enter">
             <a href="#">Reset</a>
           </div>
         </div>
        
-      </div>
-      <section class="popular-places destination">
+      </div> 
+      <div class="popular-places destination">
         <div class="popular-places__container destination-cards">
           <div class="popular-places__card">
             <img src="/src/images/California.png" alt="California">
@@ -268,10 +266,110 @@
         <div class="btn-more">
           <a href="#" class="btn--enter reset">More Places</a>
         </div>
-      </section>
+      </div>
+    </section>
+    <section class="subscribe">
+      <div class="subscribe__title">
+        <div class="subscribe__img">
+        </div>
+        <h4>Subscribe Our Newsletter</h4>
+        <p>Subscribe newsletter to get offers and about new places to discover.</p>
+      </div>
+      <div class="subscribe__form">
+        <input type="email" placeholder="Your mail">
+        <a href="#" class="btn--enter">Subscribe</a>
+      </div>
+    </section>
+    <section class="trips">
+      <div class="trips__title">
+        <h3>Recent trips</h3>
+      </div>
+      <div class="trips__container">
+        <div class="trips__card">
+          <img src="/src/images/trips(1).png" alt="trip 1">
+          <div class="trips__card--title">
+            <span>Oct 12, 2019</span>
+            <h3>Journeys Are Best Measured In New Friends</h3>
+          </div>
+        </div>
+        <div class="trips__card">
+          <img src="/src/images/trips(2).png" alt="trip 1">
+          <div class="trips__card--title">
+            <span>Oct 12, 2019</span>
+            <h3>Journeys Are Best Measured In New Friends</h3>
+          </div>
+        </div>
+        <div class="trips__card">
+          <img src="/src/images/trips(3).png" alt="trip 1">
+          <div class="trips__card--title">
+            <span>Oct 12, 2019</span>
+            <h3>Journeys Are Best Measured In New Friends</h3>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
-
+  <footer>
+    <div class="footer">
+      <div class="footer__social">
+        <div class="footer__social--logo">
+          <img src="/src/images/footer_logo.png" alt="footer logo">
+        </div>
+        <p>5th flora, 700/D kings road, green
+          lane New York-1782</p>
+        <a href="#">+10 367 826 2567</a>
+        <a href="#">contact@carpenter.com</a>
+  
+        <ul>
+          <li><i class="fa-brands fa-facebook-f"></i></li>
+          <li><i class="fa-brands fa-twitter"></i></li>
+          <li><i class="fa-brands fa-instagram"></i></li>
+          <li><i class="fa-brands fa-pinterest"></i></li>
+          <li><i class="fa-brands fa-youtube"></i></li>
+        </ul>
+      </div>
+      <div class="footer__company">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer__destination">
+        <h3>Popular Destination</h3>
+        <ul>
+          <li><a href="#">Indonesia</a></li>
+          <li><a href="#">India</a></li>
+          <li><a href="#">Italy</a></li>
+          <li><a href="#">France</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">America</a></li>
+          <li><a href="#">Switzerland</a></li>
+          <li><a href="#">Canada</a></li>
+          <li><a href="#">England</a></li>
+        </ul>
+      </div>
+      <div class="footer__instagram">
+        <h3>Instagram</h3>
+        <div class="footer__instagram--container">
+          <div><img src="/src/images/footer(ig-1).png" alt="1"></div>
+          <div><img src="/src/images/footer(ig-2).png" alt="2"></div>
+          <div><img src="/src/images/footer(ig-3).png" alt="3"></div>
+          <div><img src="/src/images/footer(ig-4).png" alt="4"></div>
+          <div><img src="/src/images/footer(ig-5).png" alt="5"></div>
+          <div><img src="/src/images/footer(ig-6).png" alt="6"></div>
+        </div>
+      </div>
+    
+    </div>
+    <div class="footer__end">
+      <span>Copyright ©2024 All rights reserved | This template is made with <i class="fa-regular fa-heart"></i> by 
+        <a href="#" class="colorlib">Colorlib</a></span>
+    </div>
+  </footer>
 </body>
 
 </html>

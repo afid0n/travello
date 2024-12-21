@@ -25,7 +25,6 @@
     }
   
     &__container {
-      border: 1px solid pink;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 2rem;
@@ -45,6 +44,9 @@
         background-color: white;
         position: relative;
         transition: 0.4s ease;
+        img{
+          width: 100%;
+        }
   
         &:hover {
           color: $color-primary;
@@ -304,16 +306,13 @@
     gap: 4rem;
     @include for-desktop-up {
       padding: 3rem 4%;
-  
     }
-    
     &__container{
       display: grid;
       grid-template-columns: repeat(3,1fr);
       gap: 2rem;
       @include for-desktop-up {
         grid-template-columns: repeat(2, 1fr);
-  
       }
   
       @include for-phone-only {
@@ -334,6 +333,7 @@
         }
       }
       img{
+        width: 100%;
         border-radius: 5px;
       }
      
