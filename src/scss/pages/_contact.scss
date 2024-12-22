@@ -49,3 +49,29 @@
   }
 
 }
+.maps{
+  padding: 3.5rem,12%;
+display: flex;
+justify-content: center;
+}
+.contact{
+padding: 3.5rem,12%;
+display: flex;
+justify-content: center;
+
+&__form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+ 
+}
+&__info{
+  display: flex;
+  flex-direction: column;
+  &--card{
+  display: flex;
+  gap: 2rem;
+  }
+}
+}

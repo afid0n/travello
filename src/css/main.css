@@ -1362,15 +1362,16 @@ footer .footer__end {
 }
 
 .story {
-  padding: 3.5rem 17%;
+  padding: 3.5rem 12%;
   display: flex;
   flex-direction: column;
   align-items: start;
   gap: 2rem;
 }
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .story {
     padding: 3.5rem 4%;
+    align-items: center;
   }
 }
 .story__title {
@@ -1398,12 +1399,14 @@ footer .footer__end {
 .story__image img {
   width: 100%;
 }
-@media (max-width: 576px) {
+@media (max-width: 992px) {
   .story__image {
     flex-direction: column;
   }
-  .story__image img {
-    width: 100%;
+}
+@media (max-width: 576px) {
+  .story__image {
+    flex-direction: column;
   }
 }
 .story__numbers {
@@ -1418,6 +1421,12 @@ footer .footer__end {
     flex-direction: column;
     gap: 2.4rem;
     padding: 2rem;
+  }
+}
+@media (max-width: 992px) {
+  .story__numbers {
+    flex-direction: column;
+    padding: 3rem;
   }
 }
 .story__numbers--card {
@@ -1785,4 +1794,30 @@ footer .footer__end {
 .hero-contact--title p {
   text-align: center;
   padding-bottom: 2rem;
+}
+
+.maps {
+  padding: 3.5rem, 12%;
+  display: flex;
+  justify-content: center;
+}
+
+.contact {
+  padding: 3.5rem, 12%;
+  display: flex;
+  justify-content: center;
+}
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+.contact__info {
+  display: flex;
+  flex-direction: column;
+}
+.contact__info--card {
+  display: flex;
+  gap: 2rem;
 }/*# sourceMappingURL=main.css.map */
