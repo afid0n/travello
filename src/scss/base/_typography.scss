@@ -288,3 +288,16 @@ footer{
         }
     }
 }
+.get-in-touch{
+    h2{
+    font-size: 27px;
+    font-weight: 600;}
+}
+.contact{
+&__info--card{
+    h3{
+        font-size: 16px;
+        font-weight: 500;
+    }
+}
+}
