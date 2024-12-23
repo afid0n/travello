@@ -9,7 +9,7 @@ export default defineConfig({
               destination: "destination.html",
               blog: "blog.html",
               singleBlog: "singleBlog.html",
-              contact: "contact.html"
+              contact: "contact.html",
             }
         }
     }
