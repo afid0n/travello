@@ -51,10 +51,25 @@
 }
 
 .blog {
-  padding: 5rem 11%;
+  padding: 5rem 12%;
   display: flex;
   justify-content: center;
   gap: 2rem;
+  @include for-desktop-up {
+    padding: 3.5rem 4%;
+    align-items: center;
+    flex-direction: column;
+}
+@include for-tablet-landscape-up {
+  padding: 3.5rem 4%;
+  align-items: center;
+  flex-direction: column;
+}
+@include for-phone-only{
+  padding: 3.5rem 4%;
+  align-items: center;
+  flex-direction: column;
+}
 
   &__container {
     display: flex;
@@ -63,13 +78,14 @@
     align-items: center;
     gap: 3rem;
 
+    
+
     &--card {
       display: flex;
       flex-direction: column;
       position: relative;
       box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-
-      .card-image {
+      img{
         width: 100%;
       }
 
@@ -77,17 +93,31 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
         color: white;
-        padding: 1rem 1.8rem;
+        width: 15%;
+        height: 15%;
         border-radius: 5px;
         background-color: $color-primary;
         position: absolute;
-        top: 50%;
+        bottom: 40%;
         left: 5%;
         transition: 0.2s linear;
         &:hover{
           background:none;
           color: $color-primary;
+        }
+        @include for-desktop-up{
+          bottom: 38%;
+          width: 14%;
+        }
+        @include for-tablet-landscape-up{
+          bottom: 35%;
+        }
+        @include for-phone-only{
+          bottom: 55%;
+          height: 12%;
+          width: 14%;
         }
 
       }
@@ -97,7 +127,10 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        gap: 0.7rem;
+        gap: 1rem;
+        @include for-phone-only{
+          padding: 2rem 1rem;
+      }
         h2{
           transition: 0.2s;
           cursor: pointer;
@@ -142,7 +175,7 @@
       display: flex;
       gap: 10px;
       a{
-       border: 1px solid #efeaf9;
+       border: 1px solid $color-blog-border;
        padding: 10px 15px;
        color: gray;
        &:hover{
@@ -150,7 +183,7 @@
         }
       }
       .active{
-        background-color: #FBF9FF;
+        background-color: $color-blog-background;
         &:hover{
           background-color: white;
           color: $color-primary;
@@ -168,7 +201,7 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      background-color: #FBF9FF;
+      background-color: $color-blog-background;
       padding: 2rem;
       width: 100%;
       gap: 1rem;
@@ -177,10 +210,9 @@
         align-items: center;
         position: relative;
         input{
-          border: 1px solid #efeaf9;
+          border: 1px solid $color-blog-border;
           padding: 1rem;
           width: 100%;
-          outline: none;
         }
         i{
           color: $accent-color;
@@ -197,29 +229,145 @@
     &--category{
     display: flex;
     flex-direction: column;
-    background-color: #FBF9FF;
+    background-color: $color-blog-background;
     padding: 2rem;
     gap: 2rem;
     width: 100%;
-    h4{
-      border-bottom: 1px solid #efeaf9;
-      padding: 10px;
+    h3{
+      border-bottom: 1px solid $color-blog-border;
+      padding: 20px 0;
     }
     ul{
       display: flex;
       flex-direction: column;
       gap: 10px;
       li{
-        border-bottom: 1px solid #efeaf9;
+        border-bottom: 1px solid $color-blog-border;
         padding-bottom: 20px;
         a{
           color: $accent-color;
+          transition: 0.3s;
+          &:hover{
+            color: $color-primary;
+          }
         }
       }
     }
     }
     &--post{
-      
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: $color-blog-background;
+      padding: 2rem 1rem;
+      gap: 1rem;
+      width: 100%;
+      h3{
+        border-bottom: 1px solid $color-blog-border;
+        padding: 20px 0;
+      }
+      .post{
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        &--title{
+          h4{
+           cursor: pointer;
+           transition: 0.3s;
+           &:hover{
+            color: $color-primary;
+          }
+        }
+          p{
+            color: $accent-color;
+          }
+        }
+      }
+    }
+    &--tag{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: $color-blog-background;
+      width: 100%;
+      padding: 2rem;
+      gap: 2rem;
+      h3{
+        border-bottom: 1px solid $color-blog-border;
+        padding: 20px 0;
+      }
+      ul{
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        cursor: pointer;
+
+        li{
+          border: 1px solid $color-blog-border;
+          background-color: white;
+          padding: 5px 15px;
+          transition: 0.3s;
+          a{
+            color: $accent-color;
+          }
+          &:hover{
+            background-color: $color-primary;
+            a{
+            color: white;
+            }
+          }
+        }
+      }
+    }
+    &--instagram{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: $color-blog-background;
+      width: 100%;
+      padding: 2rem;
+      gap: 2rem;
+      h3{
+        border-bottom: 1px solid $color-blog-border;
+        padding: 20px 0;
+      }
+      .ig-container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 1rem;
+        img{
+          cursor: pointer;
+        }
+      }
+    }
+    &--newsletter{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: $color-blog-background;
+      padding: 2rem;
+      gap: 2rem;
+      width: 100%;
+      h3{
+        border-bottom: 1px solid $color-blog-border;
+        padding: 20px 0;
+      }
+      .email{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        input{
+          border: 1px solid $color-blog-border;
+          padding: 1rem;
+          width: 100%;
+        }
+      }
+      .btn--send{
+        width: 100%;
+        text-align: center;
+      }
     }
   }
 }

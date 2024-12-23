@@ -310,18 +310,45 @@ footer{
         p{
             font-size: 18px;
         }
+        @include for-phone-only{
+            h3{
+                font-size: 20px;
+            }
+        }
     }
     .card__title{
         h2{
             font-size: 24px;
             font-weight: 600;
         }
+        @include for-phone-only{
+            h2{
+                font-size: 16px;
+            }
+        }
         
     }
-    &__info--category{
-        h4{
+    &__info{
+        h3{
             font-size: 20px;
             font-weight: 500;
+        }
+    }
+    &__info--post{
+        .post--title{
+            line-height: 2;
+        h4{
+            font-size: 16px;
+            font-weight: 500;
+        }
+        p{
+            font-size: 14px;
+        }
+    }
+    }
+    &__info--tag{
+        a{
+            font-size: 13px;
         }
     }
 }
