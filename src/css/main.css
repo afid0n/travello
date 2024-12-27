@@ -1235,6 +1235,11 @@ footer .footer__end {
   align-items: center;
   gap: 2rem;
 }
+@media (max-width: 576px) {
+  .blog__info {
+    width: 100%;
+  }
+}
 .blog__info--search {
   display: flex;
   flex-direction: column;
@@ -1375,6 +1380,7 @@ footer .footer__end {
 }
 .blog__info--instagram .ig-container img {
   cursor: pointer;
+  width: 100%;
 }
 .blog__info--newsletter {
   display: flex;
@@ -2131,7 +2137,6 @@ footer .footer__end {
 @media (max-width: 992px) {
   .single {
     padding: 3.5rem 4%;
-    align-items: center;
     flex-direction: column;
   }
 }
@@ -2496,6 +2501,7 @@ footer .footer__end {
   height: 10rem;
   padding: 1rem;
   outline: none;
+  resize: none;
 }
 .contact__form input {
   border: 1px solid #9ca1a5;
