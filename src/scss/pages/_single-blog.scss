@@ -38,7 +38,7 @@
         gap: 5px;
         z-index: 3;
         color: white;
-    
+        
         p {
           text-align: center;
           padding-bottom: 2rem;
@@ -51,9 +51,11 @@
       display: flex;
       justify-content: center;
       gap: 2rem;
+
       @include for-desktop-up {
         padding: 3.5rem 4%;
         flex-direction: column;
+        width: 100%;
       }
       &__wrapper {
         display: flex;
@@ -154,6 +156,9 @@
         align-items: center;
         gap: 10px;
         &__img{
+          img{
+          width: 100%;
+          }
           position: relative;
           &::before{
             content: "<-";
@@ -186,6 +191,9 @@
         text-align: end;
         gap: 10px;
         &__img{
+          img{
+          width: 100%;
+          }
           position: relative;
         &::before{
           content: "->";
@@ -210,6 +218,9 @@
           }
         }
         }
+      }
+      @include for-phone-only{
+        flex-direction: column;
       }
      }
     }
@@ -263,6 +274,9 @@
           &--end{
             display: flex;
             justify-content: space-between;
+            @include for-phone-only{
+              flex-direction: column;
+            }
             .username-date{
               display: flex;
               gap: 20px;
@@ -295,6 +309,7 @@
           height: 10rem;
           padding: 1rem;
           outline: none;
+          resize: none;
         }
         input{
           border: 1px solid $accent-color;
@@ -307,7 +322,7 @@
           width: 25%;
           text-align: center;
           @include for-phone-only{
-            width: 40%;
+            width: 100%;
           }
           a{
             color: white;

@@ -335,6 +335,7 @@ footer a, footer span {
   line-height: 2;
 }
 .hero-single-blog--title h3 {
+  text-align: center;
   font-family: "Nothing You Could Do";
   font-size: 80px;
 }
@@ -2138,6 +2139,7 @@ footer .footer__end {
   .single {
     padding: 3.5rem 4%;
     flex-direction: column;
+    width: 100%;
   }
 }
 .single__wrapper {
@@ -2235,6 +2237,9 @@ footer .footer__end {
 .single__post--cards .preview__img {
   position: relative;
 }
+.single__post--cards .preview__img img {
+  width: 100%;
+}
 .single__post--cards .preview__img::before {
   content: "<-";
   position: absolute;
@@ -2265,6 +2270,9 @@ footer .footer__end {
 .single__post--cards .next__img {
   position: relative;
 }
+.single__post--cards .next__img img {
+  width: 100%;
+}
 .single__post--cards .next__img::before {
   content: "->";
   position: absolute;
@@ -2284,6 +2292,11 @@ footer .footer__end {
 }
 .single__post--cards .next__img:hover::before {
   height: 100%;
+}
+@media (max-width: 576px) {
+  .single__post--cards {
+    flex-direction: column;
+  }
 }
 .single__author {
   display: flex;
@@ -2339,6 +2352,11 @@ footer .footer__end {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 576px) {
+  .single__comment--card .comment-text--end {
+    flex-direction: column;
+  }
+}
 .single__comment--card .comment-text--end .username-date {
   display: flex;
   gap: 20px;
@@ -2369,6 +2387,7 @@ footer .footer__end {
   height: 10rem;
   padding: 1rem;
   outline: none;
+  resize: none;
 }
 .single__contact .contact__form input {
   border: 1px solid #9ca1a5;
@@ -2383,7 +2402,7 @@ footer .footer__end {
 }
 @media (max-width: 576px) {
   .single__contact .contact__form .btn--send {
-    width: 40%;
+    width: 100%;
   }
 }
 .single__contact .contact__form .btn--send a {
