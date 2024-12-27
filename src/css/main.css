@@ -2296,6 +2296,7 @@ footer .footer__end {
 @media (max-width: 576px) {
   .single__post--cards {
     flex-direction: column;
+    align-items: normal;
   }
 }
 .single__author {
